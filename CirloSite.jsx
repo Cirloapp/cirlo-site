@@ -436,22 +436,6 @@ function LandingPage({ handleStartRecording }) {
               </div>
               <div className="grid md:grid-cols-3 gap-8 text-2xl text-[#a98f80]">
                 <div>
-                  <div className="font-semibold uppercase tracking-[0.08em] text-[#7a6256]">Product</div>
-                  <div className="mt-6 space-y-4">
-                    <div>How it works</div>
-                    <div>Pricing</div>
-                    <div>Start recording today</div>
-                  </div>
-                </div>
-                <div>
-                  <div className="font-semibold uppercase tracking-[0.08em] text-[#7a6256]">Company</div>
-                  <div className="mt-6 space-y-4">
-                    <div>About</div>
-                    <div>Instagram</div>
-                    <div>Contact</div>
-                  </div>
-                </div>
-                <div>
                   <div className="font-semibold uppercase tracking-[0.08em] text-[#7a6256]">Legal</div>
                   <div className="mt-6 flex flex-col gap-4">
                     <a href="https://www.cirloapp.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
