@@ -96,22 +96,6 @@ function LandingPage({ handleStartRecording }) {
       note: 'Never miss a moment—capture as much as you want, whenever it happens.',
       featured: true,
     },
-    {
-      label: 'FUTURE+',
-      name: 'Future Delivery+',
-      price: '$9.99',
-      subtitle: 'per month · or $39 per delivery',
-      features: [
-        'Everything in Cirlo Plus',
-        'Schedule recordings for future delivery',
-        'Send on birthdays, milestones, or custom dates',
-        'Backup delivery protection',
-        'Sealed-until-open experience'
-      ],
-      cta: 'Set up a future delivery',
-      note: 'Record it once. We make sure they hear it—when it matters.',
-      featured: false,
-    },
   ];
 
   const featureCards = [
