@@ -146,7 +146,6 @@ function LandingPage({ handleStartRecording }) {
     ['Can I find recordings later?', 'Yes. Your Talk Capsules stay organized using the tags and titles you choose, so they’re easy to find and come back to in your vault.'],
     ['Will my recordings be safe?', 'Yes. Your recordings are securely stored and backed up so they’re always there when you need them.'],
     ['Can I send a recording for a family member to hear?', 'Not yet. This is a feature coming soon—we’re actively working on it.'],
-    ['What is Future Delivery+?', 'It lets you record something now and have it delivered later—on a specific day that matters. Cirlo makes sure it reaches them.'],
     ['What if I change phones or emails?', 'Your vault stays with you. You can update your information anytime and your recordings stay secure and accessible.'],
   ];
 
@@ -441,7 +440,6 @@ function LandingPage({ handleStartRecording }) {
                   <div className="mt-6 space-y-4">
                     <div>How it works</div>
                     <div>Pricing</div>
-                    <div>Future delivery</div>
                     <div>Start recording today</div>
                   </div>
                 </div>
