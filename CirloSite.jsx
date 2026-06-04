@@ -36,6 +36,22 @@ export default function CirloSite() {
     return <DownloadPage googlePlayUrl={googlePlayUrl} appStoreUrl={appStoreUrl} />;
   }
 
+if (pathname === '/privacy-policy') {
+  return <PrivacyPolicy />;
+}
+
+if (pathname === '/terms-of-service') {
+  return <TermsOfService />;
+}
+
+if (pathname === '/eula') {
+  return <Eula />;
+}
+
+if (pathname === '/accessibility') {
+  return <AccessibilityStatement />;
+}
+
   return <LandingPage handleStartRecording={handleStartRecording} />;
 }
 
@@ -436,12 +452,15 @@ function LandingPage({ handleStartRecording }) {
               </div>
               <div className="grid md:grid-cols-3 gap-8 text-2xl text-[#a98f80]">
                 <div>
-                  <div className="font-semibold uppercase tracking-[0.08em] text-[#7a6256]">Legal</div>
+                <div className="font-semibold uppercase tracking-[0.08em] text-[#7a6256]">Resources</div>
                   <div className="mt-6 flex flex-col gap-4">
-                    <a href="https://www.cirloapp.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                    <a href="https://www.cirloapp.com/blank-1" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
-                    <a href="https://www.cirloapp.com/blank" target="_blank" rel="noopener noreferrer">End User License Agreement (EULA)</a>
-                    <a href="https://www.cirloapp.com/accessibility-statement" target="_blank" rel="noopener noreferrer">Accessibility Statement</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+
+<a href="/terms-of-service">Terms of Service</a>
+
+<a href="/eula">End User License Agreement (EULA)</a>
+
+<a href="/accessibility">Accessibility Statement</a>
                   </div>
                 </div>
               </div>
@@ -531,5 +550,236 @@ function DownloadPage({ googlePlayUrl, appStoreUrl }) {
         <div className="mt-8 text-base text-[#b49a8b]">Free. No credit card. Takes 60 seconds.</div>
       </div>
     </div>
+  );
+}
+function LegalPage({ title, children }) {
+  return (
+    <div className="min-h-screen bg-[#f7f1ed] px-6 py-12">
+      <div className="mx-auto max-w-4xl rounded-3xl bg-white p-8 shadow-sm md:p-12">
+        <a href="/" className="text-[#a67c7c] underline">
+          ← Back to Cirlo
+        </a>
+
+        <h1 className="mt-8 text-4xl font-semibold text-[#2b1713]">
+          {title}
+        </h1>
+
+        <div className="mt-8 space-y-4 text-[#735e53] leading-8">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+function PrivacyPolicy() {
+  return (
+    <LegalPage title="Privacy Policy">
+      Privacy Policy
+Effective Date: September 23, 2025
+Last Updated: May 31, 2026
+Introduction
+Welcome to Cirlo, a product of Origin & Co. ("Company," "we," "our," or "us").
+Cirlo is a voice-first memory preservation platform designed to help users capture, organize, and preserve personal voice recordings, stories, reflections, life lessons, and meaningful moments. While Cirlo is especially popular among first-time mothers and families, the platform may be used by anyone who wishes to preserve memories and experiences through voice.
+Your privacy is important to us. This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices available to you.
+Information We Collect
+We may collect:
+Account Information
+Name (if provided)
+Email address
+Login credentials and authentication information
+User Content
+Audio recordings
+Recording titles
+Tags, categories, and notes
+Content you voluntarily upload or create within Cirlo
+Technical Information
+Device type
+Operating system
+Browser information
+IP address
+App usage information
+Analytics and performance data
+How We Collect Information
+We collect information:
+Directly from you when you create an account or use Cirlo
+Automatically through analytics and performance monitoring tools
+Through third-party authentication and infrastructure providers
+How We Use Information
+We use information to:
+Provide and maintain Cirlo
+Store and organize your recordings
+Improve app functionality and user experience
+Respond to support requests
+Communicate service updates and product announcements
+Protect the security and integrity of the platform
+Storage of Recordings
+Audio recordings, titles, tags, and related content may be stored using secure cloud infrastructure providers, including Google Firebase, in order to provide the Cirlo service.
+We implement reasonable administrative, technical, and organizational safeguards designed to protect your information. However, no method of electronic storage, transmission, or security measure can be guaranteed to be completely secure. Accordingly, we cannot guarantee the absolute security of your information.
+
+Sharing Information
+We do not sell your personal information.
+We may share information:
+With service providers that help operate Cirlo
+To comply with legal obligations
+To protect the rights, safety, or security of users or the Company
+In connection with a business transfer, merger, or acquisition
+Data Retention
+We retain information only as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce agreements.
+Your Rights
+Depending on your location, you may have rights to:
+Access your information
+Correct inaccurate information
+Request deletion of your account and data
+Withdraw consent where applicable
+To exercise these rights, contact us at hello@cirloapp.com.
+Children's Privacy
+Cirlo is not intended for children under the age of 13.
+We do not knowingly collect personal information from children under 13. If we become aware that such information has been collected, we will take reasonable steps to delete it.
+Changes to This Policy
+We may update this Privacy Policy periodically. Updated versions will be posted with a revised "Last Updated" date.
+Contact Us
+Origin & Co.
+hello@cirloapp.com
+www.cirloapp.com
+    </LegalPage>
+  );
+}
+
+function TermsOfService() {
+  return (
+    <LegalPage title="Terms of Service">
+     Terms of Service
+Effective Date: September 23, 2025
+Last Updated: May 31, 2026
+Agreement to Terms
+Welcome to Cirlo, a product of Origin & Co.
+By accessing or using Cirlo, you agree to be bound by these Terms of Service. If you do not agree, you may not use the Services.
+Description of Service
+Cirlo is a voice-first memory preservation platform that enables users to capture, organize, store, and revisit personal stories, memories, reflections, life lessons, and meaningful moments.
+Eligibility
+You must be at least 13 years old to use Cirlo.
+By using Cirlo, you represent that you meet this requirement.
+User Accounts
+You are responsible for maintaining the confidentiality of your account credentials and for all activity occurring under your account.
+User Content
+You retain ownership of all content you create, upload, or store within Cirlo.
+You grant Origin & Co. a limited, non-exclusive license to store, process, display, transmit, and back up your content solely for the purpose of operating and improving the Services.
+Acceptable Use
+You agree not to:
+Violate any law or regulation
+Infringe another person's intellectual property rights
+Upload malicious software or harmful content
+Harass, threaten, or abuse others
+Attempt unauthorized access to systems or accounts
+Intellectual Property
+All Cirlo software, branding, logos, designs, features, and content provided by Origin & Co. remain our exclusive property unless otherwise stated.
+Subscriptions
+Certain features may require a paid subscription.
+Subscription pricing, billing, and renewal terms will be disclosed within the application.
+Termination
+We may suspend or terminate access to Cirlo if you violate these Terms or misuse the Services.
+Disclaimer
+Cirlo is provided on an "as is" and "as available" basis without warranties of any kind.
+We do not guarantee uninterrupted, secure, or error-free operation.
+Limitation of Liability
+To the fullest extent permitted by law, Origin & Co. shall not be liable for indirect, incidental, consequential, special, or punitive damages arising from your use of Cirlo.
+Governing Law
+These Terms are governed by the laws of the State of Missouri.
+Contact
+hello@cirloapp.com
+    </LegalPage>
+  );
+}
+
+function Eula() {
+  return (
+    <LegalPage title="End User License Agreement (EULA)">
+      End User License Agreement (EULA)
+Effective Date: September 23, 2025
+Last Updated: May 31, 2026
+License Grant
+Origin & Co. grants you a limited, non-exclusive, non-transferable, revocable license to use Cirlo for personal, non-commercial purposes.
+Ownership
+Cirlo and all associated intellectual property remain the property of Origin & Co.
+This Agreement does not transfer ownership rights to you.
+User Content
+You retain ownership of your recordings, stories, notes, and other content.
+By using Cirlo, you grant Origin & Co. a limited license to store, process, transmit, back up, and display your content solely as necessary to provide and improve the Services.
+Restrictions
+You may not:
+Copy or redistribute Cirlo
+Reverse engineer or decompile the software
+Attempt unauthorized access to systems
+Use Cirlo for unlawful purposes
+No Professional Advice
+Cirlo is designed to help users preserve memories, stories, reflections, family moments, and life experiences.
+Cirlo does not provide legal, medical, psychological, financial, or other professional advice.
+Privacy
+Your use of Cirlo is subject to our Privacy Policy.
+Termination
+We may suspend or terminate your access if you violate this Agreement.
+Disclaimer of Warranties
+Cirlo is provided "as is" without warranties of any kind.
+Limitation of Liability
+To the fullest extent permitted by law, Origin & Co. shall not be liable for indirect, incidental, consequential, or special damages resulting from use of the application.
+Governing Law
+This Agreement is governed by the laws of the State of Missouri.
+Contact
+hello@cirloapp.com
+    </LegalPage>
+  );
+}
+
+function AccessibilityStatement() {
+  return (
+    <LegalPage title="Accessibility Statement">
+      Accessibility Statement
+
+Effective Date: September 23, 2025
+Last Updated: May 31, 2026
+
+Origin & Co. is committed to making the Cirlo app and our website (www.cirloapp.com) accessible to all users.
+
+What Accessibility Means
+
+An accessible site allows visitors with disabilities to browse with the same or similar ease and enjoyment as other visitors, using built-in system capabilities and assistive technologies.
+
+Accessibility Efforts
+
+We have adapted this site in accordance with WCAG 2.1 Level AA guidelines. Examples of adjustments include:
+
+• Used the Accessibility Wizard to find and fix potential accessibility issues
+• Set the language of the site
+• Set the content order of the site’s pages
+• Defined clear heading structures on all of the site’s pages
+• Added alternative text to images
+• Implemented color combinations that meet the required color contrast
+• Reduced the use of motion on the site
+• Ensured all videos, audio, and files on the site are accessible
+
+Partial Compliance
+
+Some pages may include third-party content (e.g., embedded tools, external platforms). While we strive for accessibility, we cannot guarantee the compliance of such content. We welcome feedback if you encounter barriers.
+
+Our Commitment
+
+We are dedicated to continuous improvement and follow best practices outlined in the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA wherever reasonably possible. Our goal is that all individuals can:
+
+• Navigate with assistive technologies
+• Access and understand our content
+• Use our tools with minimal barriers
+
+Ongoing Improvements
+
+Accessibility remains an ongoing priority as we continue to improve and expand the Cirlo website and mobile application. We are committed to identifying and addressing accessibility barriers and improving the experience for all users.
+
+Requests, Issues and Suggestions
+
+If you experience difficulty accessing any part of our site or app, please let us know:
+
+hello@cirloapp.com
+
+We will work promptly to address your concern and ensure you have access to the information or service you need.
+    </LegalPage>
   );
 }
