@@ -15,9 +15,9 @@ export default function NewCirloLanding(){
   ];
 
   const appScreens=[
-    ['/app-record-prompt.jpg','A gentle prompt when your brain is blank','Age-based prompts help you notice the details changing right now.'],
-    ['/app-recording.jpg','Tap. Talk. Done.','Record in the moment. No polished words or long journal entry required.'],
-    ['/app-capsules.jpg','A timeline you’ll actually revisit','Search and filter your real Capsules instead of losing memories in a camera roll.']
+    ['/IMG_0706.PNG','A gentle prompt when your brain is blank','Age-based prompts help you notice the details changing right now.'],
+    ['/IMG_0707.PNG','Tap. Talk. Done.','Record in the moment. No polished words or long journal entry required.'],
+    ['/IMG_0705.PNG','A timeline you’ll actually revisit','Search and filter your real Capsules instead of losing memories in a camera roll.']
   ];
 
   return <div className="min-h-screen bg-[#f7f2ef] text-[#271712] font-sans">
@@ -48,8 +48,8 @@ export default function NewCirloLanding(){
         </div>
         <div className="relative mx-auto w-full max-w-[520px]">
           <div className="absolute -left-4 top-20 z-10 rounded-2xl bg-white px-4 py-3 text-sm shadow-lg"><b className="block text-[#795553]">4 weeks old</b><span className="text-[#8d7970]">Record their laugh before it changes.</span></div>
-          <div className="phone mx-auto w-[220px] overflow-hidden rounded-[34px] border-[7px] border-[#3d2926] bg-white">
-            <img src="/app-capsules.jpg" alt="Real Cirlo app showing a baby's private capsule timeline" width="220" className="app-shot block h-auto w-[220px] max-w-none"/>
+          <div className="phone mx-auto w-[310px] overflow-hidden rounded-[42px] border-[9px] border-[#3d2926] bg-white sm:w-[350px]">
+            <img src="/IMG_0705.PNG" alt="Real Cirlo app showing a baby's private capsule timeline" className="app-shot block h-auto w-full"/>
           </div>
           <div className="absolute -bottom-4 right-0 z-10 max-w-[210px] rounded-2xl bg-[#a87877] px-4 py-3 text-sm text-white shadow-lg">Not another baby tracker. <b>A memory vault in your own voice.</b></div>
         </div>
@@ -61,13 +61,12 @@ export default function NewCirloLanding(){
         <div className="max-w-3xl"><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87877]">This is the real app</div><h2 className="serif mt-4 text-5xl leading-none sm:text-6xl">Made for one-handed, sleep-deprived motherhood.</h2><p className="mt-6 text-xl leading-9 text-[#705d55]">No blank journal page staring back at you. Cirlo gives you a simple place to get a prompt, record your voice, and return to the moments you wanted to keep.</p></div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {appScreens.map(([img,title,text])=><div key={title} className="rounded-[32px] bg-white p-5 shadow-sm">
-            <div className="flex min-h-[500px] items-start justify-center overflow-hidden rounded-[26px] border border-[#eadfda] bg-[#fbf8f6] py-4">
-              <img src={img} alt={`Cirlo app: ${title}`} width="220" className="app-shot block h-auto w-[220px] max-w-none"/>
+            <div className="overflow-hidden rounded-[26px] border border-[#eadfda] bg-[#fbf8f6]">
+              <img src={img} alt={`Cirlo app: ${title}`} className="app-shot block h-auto w-full"/>
             </div>
             <h3 className="mt-5 text-xl font-bold">{title}</h3><p className="mt-2 leading-7 text-[#7f6c63]">{text}</p>
           </div>)}
         </div>
-        <p className="mx-auto mt-6 max-w-3xl text-center text-sm text-[#9a8580]">Real Cirlo screens shown at their native web display size for clarity.</p>
       </section>
 
       <section id="use" className="bg-[#efe5e1] px-5 py-20"><div className="mx-auto max-w-7xl"><div className="max-w-4xl"><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87877]">How you can use Cirlo</div><h2 className="serif mt-4 text-5xl leading-none sm:text-6xl">There is no “right” thing to record.</h2><p className="mt-6 text-xl leading-9 text-[#705d55]">The best Capsules can sound like real life—not a performance. Here are examples of the kinds of moments Cirlo was built to hold.</p></div><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{uses.map(([t,d,q])=><article key={t} className="rounded-[28px] border border-[#dfceca] bg-[#faf7f5] p-7"><div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-[#a87877] text-white">🎙</div><h3 className="serif text-3xl font-semibold">{t}</h3><p className="mt-4 leading-7 text-[#705d55]">{d}</p><div className="mt-6 rounded-2xl bg-white p-4 text-[#8e6866]"><div className="mb-2 text-xs font-bold uppercase tracking-wider">A Capsule could start with</div><p className="serif text-lg italic leading-7">{q}</p></div></article>)}</div><div className="mt-10 text-center"><button onClick={download} className="cta rounded-2xl bg-[#6f4e4e] px-7 py-4 text-lg font-semibold text-white">Save one ordinary moment today</button></div></div></section>
