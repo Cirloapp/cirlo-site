@@ -6,9 +6,9 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 export default function NewCirloLanding(){
  const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
  const stories=[
-  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/5668774/pexels-photo-5668774.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Motherhood · Marriage · Life',img:'https://images.pexels.com/photos/4473870/pexels-photo-4473870.jpeg?auto=compress&cs=tinysrgb&w=1800'}
+  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Motherhood · Marriage · Life',img:'https://images.pexels.com/photos/3768160/pexels-photo-3768160.jpeg?auto=compress&cs=tinysrgb&w=1800'}
  ];
  return <div className="bg-[#fefefd] text-[#272326] antialiased">
  <style>{`
@@ -77,12 +77,12 @@ export default function NewCirloLanding(){
   <section id="membership" className="bg-[#eef5f8] px-6 py-28 lg:px-10">
    <div className="mx-auto grid max-w-[1720px] gap-14 lg:grid-cols-2 lg:items-end">
     <div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Membership</p><h2 className="headline mt-7 font-semibold">Someone's<br/>been there.</h2><button onClick={download} className="mt-8 border-b-2 border-[#c4d43e] pb-1 text-lg font-bold">Find her →</button></div>
-    <div className="lg:justify-self-end"><div className="text-7xl font-semibold tracking-[-.06em]">$24.99</div><p className="mt-2 text-lg text-[#746b6d]">per month · first week free</p><div className="mt-8 space-y-2 text-lg"><p>4 private Wisdom Notes</p><p>Choose any Cirlo</p><p>Replies within 48 hours</p></div></div>
+    <div className="lg:justify-self-end lg:min-w-[470px]"><div className="flex items-start gap-4"><div className="text-7xl font-semibold tracking-[-.06em]">$24.99</div><span className="mt-2 bg-[#c4d43e] px-3 py-1 text-xs font-bold">7 DAYS FREE</span></div><p className="mt-2 text-lg text-[#746b6d]">per month · cancel anytime</p><div className="mt-9 border-t rule"><div className="flex justify-between border-b rule py-4"><span>Wisdom Notes each month</span><b>6</b></div><div className="flex justify-between border-b rule py-4"><span>Talk to</span><b>Any Cirlo</b></div><div className="flex justify-between border-b rule py-4"><span>Ask the Circle</span><b>Included</b></div><div className="flex justify-between border-b rule py-4"><span>Replies</span><b>Within 48 hrs</b></div><div className="flex justify-between border-b rule py-4"><span>Unused notes</span><b>Roll over 60 days</b></div></div><p className="mt-6 text-sm text-[#746b6d]">Need more? Add extra Wisdom Notes anytime.</p><button onClick={download} className="mt-7 rounded-full bg-[#a87877] px-7 py-4 font-semibold text-white">Start my free week →</button></div>
    </div>
   </section>
 
   <section id="become" className="grid min-h-[85vh] lg:grid-cols-2">
-   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
+   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/3768126/pexels-photo-3768126.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
    <div className="flex items-center px-6 py-24 lg:px-14"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Become a Cirlo</p><h2 className="headline mt-7 font-semibold">You've lived a life<br/><span className="text-[#a87877]">worth sharing.</span></h2><p className="mt-8 max-w-xl text-xl leading-8 text-[#746b6d]">Your lived experience can be exactly what another woman needs to hear. Respond in your own voice. Earn for the wisdom you share.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block border-b-2 border-[#c4d43e] pb-1 text-lg font-bold">Become a Cirlo →</a></div></div>
   </section>
  </main>
