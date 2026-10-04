@@ -44,7 +44,7 @@ export default function NewCirloLanding(){
         <div className="mx-auto w-full max-w-[1600px]">
           <p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-[#a87370]">Why Cirlo</p>
           <h2 className="section-title max-w-[1350px] font-semibold">Some things you don't want to <span className="text-[#a87370]">Google.</span></h2>
-          <p className="mt-10 max-w-2xl text-xl leading-8 text-[#6d5b57] sm:text-2xl">You don't want to post it. You may not want to ask your friends. You just want to talk to someone who gets it.</p>
+          <p className="mt-10 max-w-2xl text-xl leading-8 text-[#6d5b57] sm:text-2xl">Sometimes you want perspective. Sometimes an idea. Sometimes reassurance. Sometimes you just want to hear from a woman a few chapters ahead.</p>
         </div>
       </section>
 
@@ -56,9 +56,9 @@ export default function NewCirloLanding(){
               <h2 className="section-title font-semibold">“We keep having the <span className="serif italic font-normal text-[#9f6d6a]">same fight.</span>”</h2>
             </div>
             <div className="max-w-xl lg:justify-self-end">
-              <p className="text-2xl leading-9 text-[#6d5b57]">You don't necessarily want therapy. You don't want your friends knowing your business.</p>
-              <p className="mt-7 text-2xl leading-9">You just want to talk to a woman who's been married 25 years and has been through something similar.</p>
-              <p className="mt-8 font-semibold text-[#9f6d6a]">That's Cirlo.</p>
+              <p className="text-2xl leading-9 text-[#6d5b57]">Maybe you want perspective from someone outside the situation—someone with years you haven't lived yet.</p>
+              <p className="mt-7 text-2xl leading-9">You want to ask a woman who's been married 25 years what she's learned, what mattered, and what she wishes she'd known sooner.</p>
+              <p className="mt-8 font-semibold text-[#9f6d6a]">Hard moment or happy one. That's Cirlo.</p>
             </div>
           </div>
         </div>
@@ -79,16 +79,16 @@ export default function NewCirloLanding(){
           <p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-[#9f6d6a]">Whatever the season</p>
           <h2 className="section-title max-w-6xl font-semibold">Find someone who gets <span className="serif italic font-normal text-[#9f6d6a]">this part.</span></h2>
           <div className="mt-20 border-t border-[#d9cdca]">
-            {[['Motherhood',"I don't like the mom I'm becoming lately."],['Marriage',"We love each other. We just can't get past this."],['Friendship',"Do I address it or let it go?"],['Starting over',"Everyone else seems so far ahead."]].map(([t,q])=><div key={t} className="grid gap-4 border-b border-[#d9cdca] py-7 md:grid-cols-[220px_1fr] md:items-center"><span className="text-xs font-bold uppercase tracking-[.18em] text-[#8a7772]">{t}</span><span className="text-2xl font-medium tracking-[-.02em] sm:text-3xl">{q}</span></div>)}
+            {[['Motherhood',"What family traditions are your kids still talking about?"],['Marriage',"What helped you keep liking each other through the busy years?"],['Life',"What do you wish you knew at my age?"],['Next chapter',"How did you know it was time to make the change?"]].map(([t,q])=><div key={t} className="grid gap-4 border-b border-[#d9cdca] py-7 md:grid-cols-[220px_1fr] md:items-center"><span className="text-xs font-bold uppercase tracking-[.18em] text-[#8a7772]">{t}</span><span className="text-2xl font-medium tracking-[-.02em] sm:text-3xl">{q}</span></div>)}
           </div>
         </div>
       </section>
 
       <section className="flex min-h-[75vh] items-center bg-[#a87370] px-6 py-24 text-white lg:px-10">
         <div className="mx-auto w-full max-w-[1600px]">
-          <h2 className="section-title max-w-[1350px] font-semibold">Not every hard day needs an appointment.</h2>
-          <p className="mt-10 max-w-3xl text-2xl leading-9 text-white/75">Sometimes you just need a woman who's been there.</p>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-[#6d5b57]">Cirlo isn't therapy, coaching, or social media. It's private, everyday wisdom from experienced women.</p>
+          <h2 className="section-title max-w-[1350px] font-semibold">For the questions, choices, joys and messy middle.</h2>
+          <p className="mt-10 max-w-3xl text-2xl leading-9 text-white/75">Real life is bigger than the hard moments. So is Cirlo.</p>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-[#6d5b57]">Marriage. Motherhood. Friendship. Work. Family. Faith. Starting over. Growing into yourself. Ask what you're wondering and hear from someone who's lived a little further into the story.</p>
         </div>
       </section>
 
