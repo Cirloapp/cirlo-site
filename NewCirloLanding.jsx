@@ -26,14 +26,14 @@ export default function NewCirloLanding(){
 
     <main>
       <section className="relative flex min-h-screen items-end overflow-hidden px-6 pb-12 pt-32 lg:px-10 lg:pb-16">
-        <div className="absolute right-[-12vw] top-[8vh] h-[54vw] w-[54vw] max-h-[780px] max-w-[780px] rounded-full bg-[#b8d4e8] blur-[1px]"/>
+        
         <div className="absolute right-[12vw] top-[22vh] h-[30vw] w-[30vw] max-h-[430px] max-w-[430px] rounded-full bg-[#b7c83f] opacity-95"/>
         <div className="relative z-10 mx-auto w-full max-w-[1600px]">
           <div className="fade max-w-[1250px]">
-            <p className="mb-7 text-xs font-bold uppercase tracking-[.22em]">Private voice-note wisdom</p>
-            <h1 className="hero-title font-semibold">A woman<br/>who's <span className="serif italic font-normal text-[#a87370]">been there.</span></h1>
+            <p className="mb-7 text-xs font-bold uppercase tracking-[.22em]">Private voice notes · Real women · Lived wisdom</p>
+            <h1 className="hero-title font-semibold">Every woman<br/>needs a woman<br/><span className="serif italic font-normal text-[#a87370]">who's been there.</span></h1>
             <div className="mt-9 flex max-w-3xl flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
-              <p className="max-w-xl text-xl leading-8 text-[#65585a] sm:text-2xl">Say what's going on. Hear back from a woman who's lived through something similar.</p>
+              <p className="max-w-xl text-xl leading-8 text-[#65585a] sm:text-2xl">Ask what you're wondering. Hear back from a woman who's lived a little further into the story.</p>
               <button onClick={download} className="shrink-0 rounded-full bg-[#a87370] px-7 py-4 font-semibold text-white">Find your Cirlo →</button>
             </div>
           </div>
@@ -43,8 +43,8 @@ export default function NewCirloLanding(){
       <section className="flex min-h-screen items-center bg-[#edf5fb] px-6 py-24 text-[#302321] lg:px-10">
         <div className="mx-auto w-full max-w-[1600px]">
           <p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-[#a87370]">Why Cirlo</p>
-          <h2 className="section-title max-w-[1350px] font-semibold">Some things you don't want to <span className="text-[#a87370]">Google.</span></h2>
-          <p className="mt-10 max-w-2xl text-xl leading-8 text-[#65585a] sm:text-2xl">Sometimes you want perspective. Sometimes an idea. Sometimes reassurance. Sometimes you just want to hear from a woman a few chapters ahead.</p>
+          <h2 className="section-title max-w-[1350px] font-semibold">What do you wish you knew <span className="serif italic font-normal text-[#a87370]">at my age?</span></h2>
+          <p className="mt-10 max-w-2xl text-xl leading-8 text-[#65585a] sm:text-2xl">One question. A thousand things you could ask a woman a few chapters ahead.</p>
         </div>
       </section>
 
@@ -65,8 +65,8 @@ export default function NewCirloLanding(){
       </section>
 
       <section id="how" className="relative overflow-hidden bg-[#f4efed] px-6 py-24 text-[#352729] lg:px-10">
-        <div className="absolute right-[7%] top-16 h-5 w-5 rounded-full bg-[#b8c83f]"/><div className="mx-auto max-w-[1600px]">\n          <p className="mb-8 text-xs font-bold uppercase tracking-[.22em]">How it works <span className="ml-2 inline-block h-2 w-2 rounded-full bg-[#b8c83f] align-middle"/></p>
-          <h2 className="section-title max-w-6xl font-semibold">Talk.<br/>Choose.<br/><span className="serif italic font-normal">Hear back.</span></h2>
+        <div className="mx-auto max-w-[1600px]">\n          <p className="mb-8 text-xs font-bold uppercase tracking-[.22em]">How it works</p>
+          <h2 className="section-title max-w-6xl font-semibold">Say it.<br/><span className="serif italic font-normal text-[#a87370]">Tell her what you need.</span><br/>Hear her voice.</h2>
           <div className="mt-20 grid gap-px bg-[#d8d1cc] md:grid-cols-3">
             {[['01','Talk','Send a private voice note.'],['02','Choose','Just listen. Tell me what you think. Help me solve it. What should I say?'],['03','Hear back',"A woman who's lived it responds in her own voice."]].map(([n,t,d])=><div key={n} className="bg-[#f4efed] py-8 md:px-8"><div className="text-xs font-bold">{n}</div><div className="mt-16 text-4xl font-semibold">{t}</div><p className="mt-4 max-w-sm text-lg leading-7 text-[#65585a]">{d}</p></div>)}
           </div>
@@ -75,8 +75,8 @@ export default function NewCirloLanding(){
 
       <section className="px-6 py-28 lg:px-10">
         <div className="mx-auto max-w-[1600px]">
-          <p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-[#a87370]">Whatever the season <span className="ml-2 text-[#a5b52f]">✦</span></p>
-          <div className="grid gap-10 lg:grid-cols-[1fr_220px] lg:items-end"><h2 className="section-title max-w-6xl font-semibold">Find someone who gets <span className="serif italic font-normal text-[#a87370]">this part.</span></h2><div className="hidden lg:block"><div className="ml-auto h-28 w-28 rounded-full bg-[#b8d4e8]"/><div className="-mt-8 ml-5 h-10 w-10 rounded-full bg-[#b8c83f]"/></div></div>
+          <p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-[#a87370]">Whatever the season</p>
+          <div className="grid gap-10 lg:grid-cols-[1fr_220px] lg:items-end"><h2 className="section-title max-w-6xl font-semibold">Find someone who gets <span className="serif italic font-normal text-[#a87370]">this part.</span></h2></div>
           <div className="mt-20 border-t border-[#d8d1cc]">
             {[['Motherhood',"What family traditions are your kids still talking about?"],['Marriage',"What helped you keep liking each other through the busy years?"],['Life',"What do you wish you knew at my age?"],['Next chapter',"How did you know it was time to make the change?"]].map(([t,q])=><div key={t} className="grid gap-4 border-b border-[#d8d1cc] py-7 md:grid-cols-[220px_1fr] md:items-center"><span className="text-xs font-bold uppercase tracking-[.18em] text-[#827276]">{t}</span><span className="text-2xl font-medium tracking-[-.02em] sm:text-3xl">{q}</span></div>)}
           </div>
@@ -100,7 +100,7 @@ export default function NewCirloLanding(){
 
       <section id="cirlo" className="flex min-h-[80vh] items-center bg-[#edf5fb] px-6 py-24 text-[#302321] lg:px-10">
         <div className="mx-auto grid w-full max-w-[1600px] gap-14 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-          <div><p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-[#a87370]">Become a Cirlo</p><h2 className="section-title font-semibold">You've lived it.<br/><span className="serif italic font-normal text-[#a87370]">Share it.</span></h2></div>
+          <div><p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-[#a87370]">Become a Cirlo</p><h2 className="section-title font-semibold">You've lived a life<br/><span className="serif italic font-normal text-[#a87370]">worth sharing.</span></h2></div>
           <div className="max-w-xl"><p className="text-xl leading-8 text-[#65585a]">Your lived experience can be exactly what another woman needs to hear. Respond in your own voice. Earn for the wisdom you share.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-9 inline-block rounded-full bg-[#a87370] px-7 py-4 font-semibold text-white">Become a Cirlo →</a></div>
         </div>
       </section>
