@@ -5,79 +5,62 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 
 export default function NewCirloLanding(){
   const download=()=>{const u=navigator.userAgent||''; location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
-  const uses=[
-    ['The thing you never want to forget','Record the tiny details while they are still fresh: the sound of their laugh, the way they curl into you, the nickname you swear you’ll always remember.','“Today you laughed so hard you got the hiccups. I wish I could freeze this exact sound.”'],
-    ['A message for who they become','Talk to the older version of your baby. Save what you hope they know about themselves, your family, and how deeply they were loved from the beginning.','“Open this when you’re 18. I want you to know who you were before the world told you who to be.”'],
-    ['The motherhood side of the story','Keep your story too—the beautiful days, the exhausting ones, the things you are learning, and the version of you that is growing alongside them.','“You finally fell asleep on my chest. I’m exhausted, but I already know I’ll miss this.”'],
-    ['Milestones in your own voice','First smile. First laugh. First word. First steps. Capture what happened and how it felt, instead of letting the memory become another photo in your camera roll.','“Your first word was mama. I cried before you even finished saying it.”'],
-    ['A private family time capsule','Record the stories behind the people, traditions, places, and moments that made their childhood theirs. Keep it private until you decide it is time to share.','“This is the story of the day we brought you home.”'],
-    ['When you only have 60 seconds','Cirlo is made for real life. No perfect journal entry. No scrapbook to finish. Tap record while feeding, rocking, walking, or sitting in the car.','“Quick note before I forget…”'],
-  ];
-
-  const appScreens=[
-    ['/IMG_0706.PNG','A gentle prompt when your brain is blank','Age-based prompts help you notice the details changing right now.'],
-    ['/IMG_0707.PNG','Tap. Talk. Done.','Record in the moment. No polished words or long journal entry required.'],
-    ['/IMG_0705.PNG','A timeline you’ll actually revisit','Search and filter your real Capsules instead of losing memories in a camera roll.']
-  ];
-
-  return <div className="min-h-screen bg-[#f7f2ef] text-[#271712] font-sans">
-    <style>{`
-      .serif{font-family:Georgia,'Times New Roman',serif}
-      .phone{box-shadow:0 30px 80px rgba(62,35,31,.18)}
-      .cta{box-shadow:0 14px 34px rgba(112,77,75,.22)}
-      .app-shot{image-rendering:auto;transform:translateZ(0);}
-    `}</style>
-
-    <header className="sticky top-0 z-50 border-b border-[#eadfda] bg-[#f7f2ef]/95 backdrop-blur">
+  const seasons=['Marriage','Raising little ones','Working motherhood','Blended family','Starting over','Friendships','Faith','Finding yourself again'];
+  const needs=['Just listen','Tell me what you think','Help me solve it','What should I say?'];
+  return <div className="min-h-screen bg-[#fbf8f6] text-[#211817] font-sans">
+    <header className="sticky top-0 z-50 border-b border-[#eadfda] bg-[#fbf8f6]/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10">
-        <a href="/" className="flex items-center gap-2 text-2xl font-semibold text-[#9f7473]"><span className="serif text-4xl">C.</span> Cirlo</a>
-        <nav className="hidden gap-8 text-sm text-[#705d55] md:flex"><a href="#inside">See the app</a><a href="#use">How moms use it</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav>
-        <button onClick={download} className="rounded-full bg-[#795553] px-5 py-3 text-sm font-semibold text-white">Get Cirlo free</button>
+        <a href="/" className="flex items-center gap-2 text-2xl font-semibold text-[#a87573]"><span className="font-serif text-4xl">C.</span> Cirlo</a>
+        <nav className="hidden items-center gap-7 text-sm text-[#6f5c57] md:flex"><a href="#how">How it works</a><a href="#seasons">Find your Cirlo</a><a href="#pricing">Membership</a><a href="#become">Become a Cirlo</a></nav>
+        <button onClick={download} className="rounded-full bg-[#ad7a78] px-5 py-3 text-sm font-semibold text-white">Find your Cirlo</button>
       </div>
     </header>
-
     <main>
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 pt-16 lg:grid-cols-[1.03fr_.97fr] lg:items-center lg:px-10 lg:pt-24">
+      <section className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 pt-16 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:px-10 lg:pt-24">
         <div>
-          <div className="inline-flex rounded-full border border-[#d9bdbc] bg-white/60 px-4 py-2 text-sm font-semibold text-[#9f7473]">For the days you know you’ll miss someday</div>
-          <h1 className="serif mt-7 text-6xl font-semibold leading-[.96] tracking-[-.04em] sm:text-7xl lg:text-[88px]">Your baby will never be <span className="italic text-[#a87877]">this little</span> again.</h1>
-          <p className="mt-7 max-w-2xl text-2xl leading-10 text-[#705d55]">Cirlo helps you save the part photos can’t: <b>your voice, your feelings, and the story of who they were right now.</b></p>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-[#7f6c63]">Tap record. Talk for a minute. Keep it private. Build a voice archive of the baby days while you are still living them.</p>
-          <div className="mt-9 flex flex-wrap items-center gap-4"><button onClick={download} className="cta rounded-2xl bg-[#6f4e4e] px-7 py-4 text-lg font-semibold text-white">Start your first Capsule — free</button><a href="#inside" className="font-semibold text-[#795553]">See the real app ↓</a></div>
-          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#9a8580]"><span>✓ Free to start</span><span>✓ Private by default</span><span>✓ No journaling required</span></div>
+          <div className="inline-flex rounded-full bg-[#f1e3e1] px-4 py-2 text-sm font-semibold text-[#9f6f6d]">Private voice-note wisdom, woman to woman.</div>
+          <h1 className="mt-7 max-w-3xl text-6xl font-bold leading-[.94] tracking-[-.055em] sm:text-7xl lg:text-[86px]">Every woman needs a woman <span className="font-serif italic font-normal text-[#ad7a78]">who's been there.</span></h1>
+          <p className="mt-7 max-w-2xl text-xl leading-8 text-[#6f5c57] sm:text-2xl sm:leading-9">Whatever season you're in, you don't have to figure it out alone. Send a private voice note to a woman who's lived it—and hear back in her own voice.</p>
+          <div className="mt-9 flex flex-wrap gap-4"><button onClick={download} className="rounded-2xl bg-[#a97573] px-7 py-4 text-lg font-bold text-white shadow-xl">Find my Cirlo</button><a href="#become" className="rounded-2xl border border-[#d7c5c1] bg-white px-7 py-4 text-lg font-bold text-[#6f4e4e]">I've lived it. Become a Cirlo.</a></div>
+          <div className="mt-5 text-sm text-[#8d7973]">First week free · Private by design · Real women, real voices</div>
         </div>
-        <div className="relative mx-auto w-full max-w-[520px]">
-          <div className="absolute -left-4 top-20 z-10 rounded-2xl bg-white px-4 py-3 text-sm shadow-lg"><b className="block text-[#795553]">4 weeks old</b><span className="text-[#8d7970]">Record their laugh before it changes.</span></div>
-          <div className="phone mx-auto w-[310px] overflow-hidden rounded-[42px] border-[9px] border-[#3d2926] bg-white sm:w-[350px]">
-            <img src="/IMG_0705.PNG" alt="Real Cirlo app showing a baby's private capsule timeline" className="app-shot block h-auto w-full"/>
-          </div>
-          <div className="absolute -bottom-4 right-0 z-10 max-w-[210px] rounded-2xl bg-[#a87877] px-4 py-3 text-sm text-white shadow-lg">Not another baby tracker. <b>A memory vault in your own voice.</b></div>
-        </div>
-      </section>
-
-      <section className="bg-[#6f4e4e] px-5 py-12 text-center text-white"><p className="serif mx-auto max-w-5xl text-3xl italic leading-tight sm:text-5xl">You’re in almost every memory—but usually behind the camera. Cirlo makes sure <span className="text-[#efcfcc]">your voice is in the story too.</span></p></section>
-
-      <section id="inside" className="mx-auto max-w-7xl px-5 py-20 lg:px-10">
-        <div className="max-w-3xl"><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87877]">This is the real app</div><h2 className="serif mt-4 text-5xl leading-none sm:text-6xl">Made for one-handed, sleep-deprived motherhood.</h2><p className="mt-6 text-xl leading-9 text-[#705d55]">No blank journal page staring back at you. Cirlo gives you a simple place to get a prompt, record your voice, and return to the moments you wanted to keep.</p></div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {appScreens.map(([img,title,text])=><div key={title} className="rounded-[32px] bg-white p-5 shadow-sm">
-            <div className="overflow-hidden rounded-[26px] border border-[#eadfda] bg-[#fbf8f6]">
-              <img src={img} alt={`Cirlo app: ${title}`} className="app-shot block h-auto w-full"/>
-            </div>
-            <h3 className="mt-5 text-xl font-bold">{title}</h3><p className="mt-2 leading-7 text-[#7f6c63]">{text}</p>
-          </div>)}
+        <div className="mx-auto w-full max-w-[470px] rounded-[38px] border border-[#e8dcd8] bg-white p-6 shadow-2xl">
+          <div className="mb-5 flex items-center justify-between"><span className="text-sm text-[#9b8882]">What's on your mind?</span><div className="h-10 w-10 rounded-full bg-[#ead7d4]"/></div>
+          <div className="rounded-[28px] bg-[#f1e7e4] p-6"><div className="flex h-44 items-center justify-center rounded-2xl bg-[#d9c2bd]"><div className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-3xl text-[#ad7a78]">●</div></div><div className="mt-5 text-2xl font-bold">Talk to a Cirlo.</div><p className="mt-2 leading-7 text-[#725f59]">Say what's going on. No polishing. No performing.</p></div>
+          <div className="mt-5 text-sm font-bold uppercase tracking-wider text-[#a87573]">What do you need?</div>
+          <div className="mt-3 flex flex-wrap gap-2">{needs.map((x,i)=><span key={x} className={i===2?"rounded-full bg-[#ad7a78] px-3 py-2 text-sm text-white":"rounded-full bg-[#f4efed] px-3 py-2 text-sm text-[#594845]"}>{x}</span>)}</div>
+          <button onClick={download} className="mt-6 w-full rounded-full bg-[#ad7a78] py-4 font-bold text-white">Send a private voice note</button>
         </div>
       </section>
 
-      <section id="use" className="bg-[#efe5e1] px-5 py-20"><div className="mx-auto max-w-7xl"><div className="max-w-4xl"><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87877]">How you can use Cirlo</div><h2 className="serif mt-4 text-5xl leading-none sm:text-6xl">There is no “right” thing to record.</h2><p className="mt-6 text-xl leading-9 text-[#705d55]">The best Capsules can sound like real life—not a performance. Here are examples of the kinds of moments Cirlo was built to hold.</p></div><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{uses.map(([t,d,q])=><article key={t} className="rounded-[28px] border border-[#dfceca] bg-[#faf7f5] p-7"><div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-[#a87877] text-white">🎙</div><h3 className="serif text-3xl font-semibold">{t}</h3><p className="mt-4 leading-7 text-[#705d55]">{d}</p><div className="mt-6 rounded-2xl bg-white p-4 text-[#8e6866]"><div className="mb-2 text-xs font-bold uppercase tracking-wider">A Capsule could start with</div><p className="serif text-lg italic leading-7">{q}</p></div></article>)}</div><div className="mt-10 text-center"><button onClick={download} className="cta rounded-2xl bg-[#6f4e4e] px-7 py-4 text-lg font-semibold text-white">Save one ordinary moment today</button></div></div></section>
+      <section className="bg-[#6f4e4e] px-5 py-12 text-center text-white"><p className="font-serif mx-auto max-w-5xl text-3xl leading-tight sm:text-5xl">Not advice from the internet. <i className="text-[#efd1cd]">Wisdom from a woman who's lived it.</i></p></section>
 
-      <section id="how" className="mx-auto max-w-7xl px-5 py-20 lg:px-10"><div className="grid gap-10 lg:grid-cols-[.85fr_1.15fr]"><div><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87877]">60 seconds is enough</div><h2 className="serif mt-4 text-5xl leading-none sm:text-6xl">The memory habit that fits into motherhood.</h2></div><div className="space-y-4">{[['01','Open Cirlo when you think, “I want to remember this.”'],['02','Tap record and talk like you’re speaking directly to them.'],['03','Give it a title. Cirlo keeps it private and organized for you.']].map(([n,t])=><div key={n} className="flex gap-5 rounded-3xl border border-[#e3d5d0] bg-white p-6"><div className="serif text-4xl text-[#a87877]">{n}</div><div className="text-xl font-semibold leading-8">{t}</div></div>)}</div></div></section>
+      <section id="how" className="mx-auto max-w-7xl px-5 py-20 lg:px-10">
+        <div className="max-w-3xl"><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87573]">How Cirlo works</div><h2 className="mt-4 text-5xl font-bold tracking-[-.04em] sm:text-6xl">Talk like you would to someone you trust.</h2></div>
+        <div className="mt-12 grid gap-5 md:grid-cols-3">{[['01',"Tell her what's going on.",'Record a private voice note. Say it messy, emotional, unfinished—however it comes out.'],['02','Tell her what you need.','Choose Just listen, Tell me what you think, Help me solve it, or What should I say?'],['03',"Hear from someone who's been there.",'A Cirlo responds in her own voice with the perspective only lived experience can give.']].map(([n,t,d])=><div key={n} className="rounded-[30px] border border-[#eadfda] bg-white p-7"><div className="font-serif text-4xl text-[#ad7a78]">{n}</div><h3 className="mt-6 text-2xl font-bold">{t}</h3><p className="mt-3 leading-7 text-[#725f59]">{d}</p></div>)}</div>
+      </section>
 
-      <section className="px-5 pb-20"><div className="mx-auto max-w-6xl rounded-[42px] bg-[#a87877] px-7 py-14 text-center text-white sm:px-14"><div className="text-sm font-bold uppercase tracking-[.18em] text-white/70">For the mom who keeps meaning to start</div><h2 className="serif mx-auto mt-5 max-w-4xl text-5xl leading-none sm:text-6xl">You don’t need to catch up. <i>Start with today.</i></h2><p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-white/85">Record one ordinary minute tonight. Someday, ordinary may be exactly what you want back.</p><button onClick={download} className="mt-8 rounded-2xl bg-white px-7 py-4 text-lg font-bold text-[#6f4e4e]">Create your first Capsule</button><div className="mt-4 text-sm text-white/70">Free to start · Private by default</div></div></section>
+      <section id="seasons" className="bg-[#f0e5e2] px-5 py-20"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+        <div><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87573]">Your season matters</div><h2 className="mt-4 text-5xl font-bold tracking-[-.04em] sm:text-6xl">Find a woman who gets <i className="font-serif font-normal text-[#a87573]">this</i> part.</h2><p className="mt-6 text-xl leading-8 text-[#725f59]">Cirlo connects you with women based on the seasons they've actually lived through—not a title, follower count, or perfect résumé.</p></div>
+        <div className="flex flex-wrap gap-3">{seasons.map((s,i)=><div key={s} className={i<3?"rounded-full border border-[#ad7a78] bg-[#ad7a78] px-5 py-3 font-semibold text-white":"rounded-full border border-[#dac9c5] bg-white px-5 py-3 font-semibold text-[#66524e]"}>{s}</div>)}</div>
+      </div></section>
 
-      <section id="faq" className="mx-auto max-w-5xl px-5 pb-24"><h2 className="serif text-center text-5xl">Before you record your first one</h2><div className="mt-10 space-y-3">{[['Do I have to journal or write?','No. Cirlo is voice-first. Record your thought, add a short title, and you’re done.'],['Is it public?','No. Capsules are private by default. There is no public feed and no pressure to perform.'],['What if I don’t know what to say?','Cirlo includes age-based prompts, but you can record anything. The ordinary details are often the ones that become most meaningful.'],['Can I find old recordings later?','Yes. Your Capsules live in an organized timeline and can be searched and filtered.']].map(([q,a])=><details key={q} className="rounded-2xl border border-[#e3d5d0] bg-white p-5"><summary className="cursor-pointer text-lg font-bold">{q}</summary><p className="mt-3 leading-7 text-[#705d55]">{a}</p></details>)}</div></section>
+      <section className="mx-auto max-w-7xl px-5 py-20 lg:px-10"><div className="grid gap-8 lg:grid-cols-2">
+        <div className="rounded-[36px] bg-white p-8 shadow-xl"><div className="text-sm font-bold uppercase tracking-wider text-[#a87573]">Your Cirlo</div><h2 className="mt-4 text-4xl font-bold">Women who've lived through the seasons you're in.</h2><div className="mt-8 rounded-[28px] bg-[#f4ece9] p-6"><div className="flex items-center gap-4"><div className="h-16 w-16 rounded-full bg-[#cdaaa4]"/><div><b className="text-xl">Meet your Cirlo</b><div className="text-[#806b65]">Listen to her intro. See what she's lived.</div></div></div><div className="mt-5 flex flex-wrap gap-2 text-sm"><span className="rounded-full bg-white px-3 py-2">Marriage</span><span className="rounded-full bg-white px-3 py-2">Little ones</span><span className="rounded-full bg-white px-3 py-2">Faith</span></div></div></div>
+        <div className="rounded-[36px] bg-[#ad7a78] p-8 text-white"><div className="text-sm font-bold uppercase tracking-wider text-white/70">Private by design</div><h2 className="mt-4 text-4xl font-bold">No feed. No comments section. No performing.</h2><p className="mt-6 text-xl leading-8 text-white/85">Your voice notes are conversations, not content. Ask what you wouldn't post. Say what you haven't figured out yet. Keep the wisdom that helps.</p></div>
+      </div></section>
+
+      <section id="pricing" className="px-5 py-20"><div className="mx-auto max-w-5xl text-center"><div className="text-sm font-bold uppercase tracking-[.18em] text-[#a87573]">Membership</div><h2 className="mt-4 text-5xl font-bold tracking-[-.04em] sm:text-6xl">Wisdom whenever you need it.</h2><p className="mx-auto mt-5 max-w-2xl text-xl leading-8 text-[#725f59]">One membership. Every Cirlo. Talk to whoever feels right.</p>
+        <div className="mx-auto mt-10 max-w-xl rounded-[36px] bg-white p-8 text-left shadow-2xl"><div className="text-sm font-bold text-[#a87573]">CIRLO MEMBERSHIP</div><div className="mt-3 text-5xl font-bold">$24.99<span className="text-xl font-medium text-[#806b65]"> / month</span></div><div className="mt-2 text-[#806b65]">First week free. Cancel anytime.</div><div className="mt-7 space-y-3 text-lg">{['4 Wisdom Notes a month','Send to any Cirlo, or Ask the Circle','Replies within 48 hours','Unused notes roll over for 60 days'].map(x=><div key={x}>✓ &nbsp;{x}</div>)}</div><button onClick={download} className="mt-8 w-full rounded-full bg-[#ad7a78] py-4 text-lg font-bold text-white">Start my free week</button></div>
+      </div></section>
+
+      <section id="become" className="bg-[#211817] px-5 py-20 text-white"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div><div className="text-sm font-bold uppercase tracking-[.18em] text-[#d5aaa5]">Become a Cirlo</div><h2 className="mt-4 text-5xl font-bold tracking-[-.04em] sm:text-6xl">You've lived it. <span className="font-serif italic font-normal text-[#d5aaa5]">Share it.</span></h2><p className="mt-6 max-w-xl text-xl leading-8 text-white/70">The things you've learned through marriage, motherhood, family, work, faith, loss, rebuilding, or simply living can be exactly what another woman needs to hear.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block rounded-2xl bg-[#ad7a78] px-7 py-4 text-lg font-bold text-white">Apply to become a Cirlo</a></div>
+        <div className="rounded-[32px] bg-white/10 p-7"><div className="text-3xl font-bold">Your wisdom is valuable.</div><div className="mt-6 space-y-4 text-lg text-white/75"><div>✓ Create a profile around the seasons you've lived.</div><div>✓ Receive private voice notes from women who choose you.</div><div>✓ Respond in your own voice, on your own time.</div><div>✓ Earn for the wisdom you share.</div></div><div className="mt-7 rounded-2xl bg-white/10 p-5 text-sm text-white/60">Cirlos are reviewed before going live so women can choose from trusted, thoughtful voices.</div></div>
+      </div></section>
+
+      <section className="px-5 py-20"><div className="mx-auto max-w-6xl rounded-[40px] bg-[#ead9d5] px-7 py-14 text-center"><h2 className="mx-auto max-w-4xl text-5xl font-bold tracking-[-.04em] sm:text-6xl">You don't need someone with all the answers. <span className="font-serif italic font-normal text-[#a87573]">You need someone who's been there.</span></h2><button onClick={download} className="mt-8 rounded-2xl bg-[#ad7a78] px-8 py-4 text-lg font-bold text-white">Find my Cirlo</button></div></section>
     </main>
-
-    <footer className="border-t border-[#e3d5d0] px-5 py-10 text-sm text-[#806d64]"><div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4"><div><span className="serif text-2xl text-[#a87877]">C.</span> Cirlo — Keep the voice behind the memories.</div><div className="flex gap-5"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a></div></div></footer>
+    <footer className="border-t border-[#e5d8d3] px-5 py-10 text-sm text-[#806d67]"><div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5"><div><span className="font-serif text-2xl text-[#a87573]">C.</span> Cirlo — Woman to woman, season to season.</div><div className="flex flex-wrap gap-5"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/eula">EULA</a><a href="/accessibility">Accessibility</a></div></div></footer>
   </div>
 }
