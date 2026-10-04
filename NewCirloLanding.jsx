@@ -5,9 +5,9 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 
 export default function NewCirloLanding(){
   const download=()=>{const u=navigator.userAgent||''; location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
-  return <div className="bg-[#fffdfb] text-[#352729] antialiased">
+  return <div className="bg-[#fdfdfc] text-[#352729] antialiased">
     <style>{`
-      html{scroll-behavior:smooth} body{margin:0;background:#fffdfb}
+      html{scroll-behavior:smooth} body{margin:0;background:#fdfdfc}
       .serif{font-family:Georgia,'Times New Roman',serif}
       .hero-title{font-size:clamp(4.2rem,9.2vw,9.2rem);line-height:.86;letter-spacing:-.07em}
       .section-title{font-size:clamp(3.3rem,7vw,7.4rem);line-height:.9;letter-spacing:-.06em}
@@ -27,13 +27,13 @@ export default function NewCirloLanding(){
     <main>
       <section className="relative min-h-screen overflow-hidden bg-[#fff] px-6 pb-12 pt-28 lg:px-10 lg:pb-16">
         <div className="mx-auto mb-10 max-w-[1600px] overflow-hidden rounded-[2px]">
-          <img src="https://hamburg-business.com/_Resources/Persistent/6/a/e/5/6ae56c598ab70c9579c5a1b813f8bcf5e62843c3/generationen-the-embassies-robert-winter-060124-1080x1080.jpg" alt="Two women from different generations in conversation" className="h-[48vh] w-full object-cover object-center sm:h-[58vh] lg:h-[64vh]"/>
+          <div className="relative h-[52vh] overflow-hidden sm:h-[62vh] lg:h-[70vh]"><video autoPlay muted loop playsInline poster="https://images.pexels.com/videos/5516401/pexels-photo-5516401.jpeg?auto=compress&h=900&w=1600" className="h-full w-full object-cover"><source src="https://videos.pexels.com/video-files/5516401/5516401-uhd_3840_2160_30fps.mp4" type="video/mp4"/></video><div className="absolute bottom-6 left-6 rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[.16em] text-[#a87370] backdrop-blur">Women who have lived it <span className="ml-2 text-[#9fac2f]">✦</span></div></div>
         </div>
         
         <div className="absolute right-[12vw] top-[22vh] h-[30vw] w-[30vw] max-h-[430px] max-w-[430px] rounded-full bg-[#b7c83f] opacity-95"/>
         <div className="relative z-10 mx-auto w-full max-w-[1600px]">
           <div className="fade max-w-[1250px]">
-            <p className="mb-7 text-xs font-bold uppercase tracking-[.22em]">Private voice notes · Real women · Lived wisdom</p>
+            <p className="mb-7 text-xs font-bold uppercase tracking-[.22em]">Private voice notes · Real women · Lived wisdom <span className="ml-2 text-[#9fac2f]">✦</span></p>
             <h1 className="hero-title font-semibold">Every woman<br/>needs a woman<br/><span className="serif italic font-normal text-[#a87370]">who's been there.</span></h1>
             <div className="mt-9 flex max-w-3xl flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
               <p className="max-w-xl text-xl leading-8 text-[#65585a] sm:text-2xl">Ask what you're wondering. Hear back from a woman who's lived a little further into the story.</p>
@@ -44,7 +44,7 @@ export default function NewCirloLanding(){
       </section>
 
       <section className="grid min-h-screen overflow-hidden lg:grid-cols-2">
-        <div className="min-h-[55vh] lg:min-h-screen"><img src="https://gvb.imgix.net/content/dam/gini/hausinfo/bilder/recht/wohnrecht-nutzniessung.jpg.hash/aca2c9bbcd6fb06b8812ab31a011461425d430d6?auto=format%2Ccompress%2Ccs%3Dtinysrgb&crop=focalpoint&fit=crop&fp-x=0.5120226&fp-y=0.38826025&fp-z=1&h=1414&w=2121" alt="Two women sharing a warm conversation over coffee" className="h-full min-h-[55vh] w-full object-cover lg:min-h-screen"/></div>
+        <div className="min-h-[55vh] lg:min-h-screen"><img src="https://images.pexels.com/photos/6953856/pexels-photo-6953856.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Two women sharing a warm conversation over coffee" className="h-full min-h-[55vh] w-full object-cover lg:min-h-screen"/></div>
         <div className="flex items-center bg-[#a87370] px-7 py-20 text-white lg:px-16"><div><div className="mb-7 h-3 w-3 rounded-full bg-[#c4d43e]"></div><p className="mb-8 text-xs font-bold uppercase tracking-[.22em] text-white/70">Woman to woman</p><h2 className="section-title font-semibold">Ask someone<br/><span className="serif italic font-normal">who knows.</span></h2><p className="mt-8 max-w-lg text-xl leading-8 text-white/75">Not because she has every answer. Because she's lived a little further into the story.</p></div></div>
       </section>
 
@@ -83,7 +83,7 @@ export default function NewCirloLanding(){
 
       <section className="px-6 py-28 lg:px-10">
         <div className="mx-auto mb-20 grid max-w-[1600px] gap-5 md:grid-cols-[1.35fr_.65fr]">
-          <img src="https://images.squarespace-cdn.com/content/v1/587923fe86e6c07719f1b40c/020a1316-3da4-458f-acc9-88d6108a7eb7/jg-114%2B%285%29_1.jpg" alt="Women laughing together in a bright kitchen" className="h-[52vh] w-full object-cover"/>
+          <img src="https://images.pexels.com/photos/7951932/pexels-photo-7951932.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Women laughing together in a bright kitchen" className="h-[52vh] w-full object-cover"/>
           <div className="relative hidden bg-[#f4efed] md:block"><div className="absolute bottom-8 left-8 h-4 w-4 rounded-full bg-[#c4d43e]"></div><div className="absolute right-8 top-8 max-w-[220px] text-3xl font-semibold leading-tight">Joy counts as wisdom, too.</div></div>
         </div>
         <div className="mx-auto max-w-[1600px]">
@@ -101,6 +101,11 @@ export default function NewCirloLanding(){
           <p className="mt-10 max-w-3xl text-2xl leading-9 text-white/75">Real life is bigger than the hard moments. So is Cirlo.</p>
           <p className="mt-6 max-w-2xl text-base leading-7 text-[#65585a]">Marriage. Motherhood. Friendship. Work. Family. Faith. Starting over. Growing into yourself. Ask what you're wondering and hear from someone who's lived a little further into the story.</p>
         </div>
+      </section>
+
+      <section className="grid overflow-hidden bg-[#fdfdfc] lg:grid-cols-[.9fr_1.1fr]">
+        <div className="relative min-h-[58vh]"><video autoPlay muted loop playsInline poster="https://images.pexels.com/videos/4874082/pexels-photo-4874082.jpeg?auto=compress&h=900&w=1200" className="absolute inset-0 h-full w-full object-cover"><source src="https://videos.pexels.com/video-files/4874082/4874082-uhd_3840_2160_25fps.mp4" type="video/mp4"/></video></div>
+        <div className="flex min-h-[58vh] items-center px-7 py-20 lg:px-16"><div><div className="mb-8 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[.2em] text-[#a87370]"><span className="h-2 w-2 rounded-full bg-[#c4d43e]"></span>For all of life</div><p className="serif max-w-3xl text-5xl leading-[1.03] sm:text-6xl">“What helped you feel more like yourself again?”</p><p className="mt-8 max-w-lg text-lg leading-8 text-[#65585a]">A hard day. A happy change. A question you can't stop thinking about. Cirlo is for all of it.</p></div></div>
       </section>
 
       <section id="membership" className="px-6 py-28 lg:px-10">
