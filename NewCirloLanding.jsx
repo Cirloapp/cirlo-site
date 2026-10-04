@@ -6,9 +6,9 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 export default function NewCirloLanding(){
  const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
  const stories=[
-  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/3768146/pexels-photo-3768146.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Motherhood · Marriage · Life',img:'https://images.pexels.com/photos/3764014/pexels-photo-3764014.jpeg?auto=compress&cs=tinysrgb&w=1800'}
+  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/5668774/pexels-photo-5668774.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Motherhood · Marriage · Life',img:'https://images.pexels.com/photos/4473870/pexels-photo-4473870.jpeg?auto=compress&cs=tinysrgb&w=1800'}
  ];
  return <div className="bg-[#fefefd] text-[#272326] antialiased">
  <style>{`
@@ -32,8 +32,8 @@ export default function NewCirloLanding(){
   <section className="flex min-h-screen items-end px-6 pb-12 pt-28 lg:px-10">
    <div className="mx-auto w-full max-w-[1720px]">
     <div className="grid gap-10 lg:grid-cols-[1.3fr_.7fr] lg:items-end">
-     <h1 className="display font-semibold">You haven't<br/>lived it yet.<br/><span className="text-[#a87877]">Someone has.</span></h1>
-     <div className="max-w-md pb-3 lg:justify-self-end"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Cirlo / 2026</p><p className="mt-5 text-xl leading-8 text-[#746b6d]">Lived experience, made accessible.</p><button onClick={download} className="mt-7 border-b-2 border-[#c4d43e] pb-1 text-lg font-bold">Find her →</button></div>
+     <h1 className="display font-semibold">Every woman needs<br/>a woman <span className="text-[#a87877]">who's been there.</span></h1>
+     <div className="max-w-md pb-3 lg:justify-self-end"><p className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Cirlo / 2026</p><p className="mt-5 text-xl leading-8 text-[#746b6d]">Real women who’ve lived the season you’re in.<br/>Send a voice note. Hear back in her own voice.</p><button onClick={download} className="mt-7 border-b-2 border-[#c4d43e] pb-1 text-lg font-bold">Find her →</button></div>
     </div>
    </div>
   </section>
@@ -82,7 +82,7 @@ export default function NewCirloLanding(){
   </section>
 
   <section id="become" className="grid min-h-[85vh] lg:grid-cols-2">
-   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/3768146/pexels-photo-3768146.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
+   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
    <div className="flex items-center px-6 py-24 lg:px-14"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Become a Cirlo</p><h2 className="headline mt-7 font-semibold">You've lived a life<br/><span className="text-[#a87877]">worth sharing.</span></h2><p className="mt-8 max-w-xl text-xl leading-8 text-[#746b6d]">Your lived experience can be exactly what another woman needs to hear. Respond in your own voice. Earn for the wisdom you share.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block border-b-2 border-[#c4d43e] pb-1 text-lg font-bold">Become a Cirlo →</a></div></div>
   </section>
  </main>
