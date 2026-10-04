@@ -53,6 +53,11 @@ export default function NewCirloLanding(){
    <div className="ticker flex w-max gap-16 whitespace-nowrap text-xs font-bold uppercase tracking-[.2em]">{Array(2).fill(['Married 34 years','Changed careers at 40','Raised three','Started over at 52','Built a business','Found herself again']).flat().map((x,i)=><span key={i}>{x}<span className="ml-16 text-[#c4d43e]">●</span></span>)}</div>
   </section>
 
+  <section className="grid min-h-[72vh] overflow-hidden lg:grid-cols-[1.35fr_.65fr]">
+   <div className="min-h-[58vh] bg-[url('https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
+   <div className="flex items-end bg-[#a87877] px-7 py-12 text-white lg:px-10"><div><div className="mb-6 h-[2px] w-16 bg-[#c4d43e]"></div><p className="text-xs font-bold uppercase tracking-[.22em] text-white/70">Life, in progress</p><p className="mt-5 text-4xl font-semibold leading-tight">The good parts count, too.</p></div></div>
+  </section>
+
   <section className="px-6 py-28 lg:px-10">
    <div className="mx-auto grid max-w-[1720px] gap-16 lg:grid-cols-[1.15fr_.85fr]">
     <div><div className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Cirlo</div><h2 className="display mt-7 font-semibold text-[#a87877]">Borrow<br/>experience.</h2></div>
@@ -82,7 +87,7 @@ export default function NewCirloLanding(){
   </section>
 
   <section id="become" className="grid min-h-[85vh] lg:grid-cols-2">
-   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
+   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
    <div className="flex items-center px-6 py-24 lg:px-14"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Become a Cirlo</p><h2 className="headline mt-7 font-semibold">You've lived a life<br/><span className="text-[#a87877]">worth sharing.</span></h2><p className="mt-8 max-w-xl text-xl leading-8 text-[#746b6d]">Your lived experience can be exactly what another woman needs to hear. Respond in your own voice. Earn for the wisdom you share.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block border-b-2 border-[#c4d43e] pb-1 text-lg font-bold">Become a Cirlo →</a></div></div>
   </section>
  </main>
