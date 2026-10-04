@@ -6,9 +6,9 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 export default function NewCirloLanding(){
  const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
  const stories=[
-  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Motherhood · Marriage · Life',img:'https://images.pexels.com/photos/3768160/pexels-photo-3768160.jpeg?auto=compress&cs=tinysrgb&w=1800'}
+  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/1580270/pexels-photo-1580270.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Life · Identity · Perspective',img:'https://images.pexels.com/photos/762114/pexels-photo-762114.jpeg?auto=compress&cs=tinysrgb&w=1800'}
  ];
  return <div className="bg-[#fefefd] text-[#272326] antialiased">
  <style>{`
@@ -40,7 +40,7 @@ export default function NewCirloLanding(){
 
   <section id="stories">
    {stories.map((s,i)=><article key={s.n} className="story relative min-h-screen overflow-hidden">
-    <img src={s.img} alt={s.name} className="absolute inset-0 h-full w-full object-cover"/>
+    <img src={s.img} alt={s.name} className="absolute inset-0 h-full w-full object-cover object-[center_28%]"/>
     <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/10"/>
     <div className="relative z-10 flex min-h-screen flex-col justify-between px-6 py-10 text-white lg:px-10">
      <div className="flex justify-between text-xs font-bold uppercase tracking-[.22em]"><span>{s.n} — {s.k}</span><span className={i===1?'border-b-2 border-[#c4d43e] pb-1':''}>{s.meta}</span></div>
@@ -82,7 +82,7 @@ export default function NewCirloLanding(){
   </section>
 
   <section id="become" className="grid min-h-[85vh] lg:grid-cols-2">
-   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/3768126/pexels-photo-3768126.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
+   <div className="min-h-[55vh] bg-[url('https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
    <div className="flex items-center px-6 py-24 lg:px-14"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-[#a87877]">Become a Cirlo</p><h2 className="headline mt-7 font-semibold">You've lived a life<br/><span className="text-[#a87877]">worth sharing.</span></h2><p className="mt-8 max-w-xl text-xl leading-8 text-[#746b6d]">Your lived experience can be exactly what another woman needs to hear. Respond in your own voice. Earn for the wisdom you share.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block border-b-2 border-[#c4d43e] pb-1 text-lg font-bold">Become a Cirlo →</a></div></div>
   </section>
  </main>
