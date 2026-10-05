@@ -6,9 +6,9 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 export default function NewCirloLanding(){
  const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
  const stories=[
-  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://mediaslide-us.storage.googleapis.com/anm-mgmt/pictures/1919/1349/profile-1750090017-e415e9fe1235043b3eeed6fd6da8ebf4.jpg'},
-  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://dam.mediacorp.sg/image/upload/s--88EzkkNm--/c_crop%2Ch_1875%2Cw_2500%2Cx_0%2Cy_1/c_fill%2Cg_auto%2Ch_523%2Cw_693/fl_relative%2Cg_south_east%2Cl_mediacorp%3Acna%3Awatermark%3A2021-08%3Acna%2Cw_0.1/f_auto%2Cq_auto/v1/mediacorp/cna/image/2021-08/bee-yan-5.jpg?itok=B_RSKMTz'},
-  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Life · Identity · Perspective',img:'https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A/storage.googleapis.com/msgsndr/oTg6XFIHWXXuUiQfnAGt/media/68d4086e7f400ac776519d0c.jpeg'}
+  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/20414870/pexels-photo-20414870/free-photo-of-elderly-woman-sitting-in-black-dress.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/36220496/pexels-photo-36220496/free-photo-of-black-and-white-fashion-editorial-with-a-modern-flair.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Life · Identity · Perspective',img:'https://images.pexels.com/photos/21714470/pexels-photo-21714470/free-photo-of-black-and-white-photo-of-woman-on-street.jpeg?auto=compress&cs=tinysrgb&w=1800'}
  ];
  return <div className="bg-[#fefefd] text-[#272326] antialiased">
  <style>{`
