@@ -6,9 +6,9 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 export default function NewCirloLanding(){
  const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
  const stories=[
-  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://images.pexels.com/photos/1580270/pexels-photo-1580270.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Life · Identity · Perspective',img:'https://images.pexels.com/photos/762114/pexels-photo-762114.jpeg?auto=compress&cs=tinysrgb&w=1800'}
+  {n:'01',k:'MARRIAGE',age:'34 YEARS',line:'Ask her something.',name:'Denise',meta:'Married 34 years · Raised 3',img:'https://mediaslide-us.storage.googleapis.com/anm-mgmt/pictures/1919/1349/profile-1750090017-e415e9fe1235043b3eeed6fd6da8ebf4.jpg'},
+  {n:'02',k:'STARTING OVER',age:'52',line:'She started over.',name:'Renee',meta:'New city · New chapter',img:'https://dam.mediacorp.sg/image/upload/s--88EzkkNm--/c_crop%2Ch_1875%2Cw_2500%2Cx_0%2Cy_1/c_fill%2Cg_auto%2Ch_523%2Cw_693/fl_relative%2Cg_south_east%2Cl_mediacorp%3Acna%3Awatermark%3A2021-08%3Acna%2Cw_0.1/f_auto%2Cq_auto/v1/mediacorp/cna/image/2021-08/bee-yan-5.jpg?itok=B_RSKMTz'},
+  {n:'03',k:'MOTHERHOOD',age:'THREE KIDS',line:'She has thoughts.',name:'Monica',meta:'Life · Identity · Perspective',img:'https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A/storage.googleapis.com/msgsndr/oTg6XFIHWXXuUiQfnAGt/media/68d4086e7f400ac776519d0c.jpeg'}
  ];
  return <div className="bg-[#fefefd] text-[#272326] antialiased">
  <style>{`
@@ -40,7 +40,7 @@ export default function NewCirloLanding(){
 
   <section id="stories">
    {stories.map((s,i)=><article key={s.n} className="story relative min-h-screen overflow-hidden">
-    <img src={s.img} alt={s.name} className="absolute inset-0 h-full w-full object-cover object-[center_28%]"/>
+    <img src={s.img} alt={s.name} className={`absolute inset-0 h-full w-full object-cover ${i===0?'object-center':i===1?'object-[center_45%]':'object-[center_35%]'}`}/>
     <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/10"/>
     <div className="relative z-10 flex min-h-screen flex-col justify-between px-6 py-10 text-white lg:px-10">
      <div className="flex justify-between text-xs font-bold uppercase tracking-[.22em]"><span>{s.n} — {s.k}</span><span className={i===1?'border-b-2 border-[#c4d43e] pb-1':''}>{s.meta}</span></div>
