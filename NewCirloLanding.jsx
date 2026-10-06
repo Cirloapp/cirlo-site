@@ -56,7 +56,7 @@ export default function NewCirloLanding(){
 
       <section id="cirlos" className="bg-white px-6 py-24 lg:px-10">
         <div className="mx-auto max-w-[1500px]">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-[#66705B]">Women to know</p><h2 className="h2 serif mt-5">She knows something you don't.</h2></div><button onClick={download} className="w-fit border-b border-[#242A20] pb-1 text-sm font-semibold uppercase tracking-[.1em]">ASK HER ↗</button></div>
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-[#66705B]">There’s a woman for that.</p><h2 className="h2 serif mt-5">She knows something you don't.</h2></div><button onClick={download} className="w-fit border-b border-[#242A20] pb-1 text-sm font-semibold uppercase tracking-[.1em]">ASK HER ↗</button></div>
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {women.map(w=><article key={w.name} className="card group cursor-pointer"><div className="aspect-[3/2] overflow-hidden bg-[#E6EADD]"><img src={w.img} alt={w.name} className="cardimg h-full w-full object-cover grayscale contrast-125"/></div><div className="flex items-start justify-between border-b border-[#CDD3C1] py-5"><div><div className="serif text-3xl">{w.name}</div><div className="mt-1 text-sm text-[#7C876F]">{w.proof}</div></div><div className="bg-[#C8F135] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.12em]">{w.season}</div></div></article>)}
           </div>
@@ -104,6 +104,6 @@ export default function NewCirloLanding(){
       </section>
     </main>
 
-    <footer className="bg-[#F3F5EC] px-6 py-12 lg:px-10"><div className="mx-auto flex max-w-[1500px] flex-col gap-8 border-t border-[#CDD3C1] pt-10 md:flex-row md:items-end md:justify-between"><div><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-12 w-auto"/><p className="mt-3 text-sm text-[#7C876F]">Different lives. Shared wisdom.</p></div><div className="flex flex-wrap gap-6 text-sm"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a><span>hello@cirloapp.com</span></div></div></footer>
+    <footer className="bg-[#F3F5EC] px-6 py-12 lg:px-10"><div className="mx-auto flex max-w-[1500px] flex-col gap-8 border-t border-[#CDD3C1] pt-10 md:flex-row md:items-end md:justify-between"><div><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-12 w-auto"/><p className="mt-3 text-sm text-[#7C876F]">There’s a woman for that.</p></div><div className="flex flex-wrap gap-6 text-sm"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a><span>hello@cirloapp.com</span></div></div></footer>
   </div>
 }
