@@ -22,7 +22,7 @@ export default function NewCirloLanding(){
 
     <header className="absolute inset-x-0 top-0 z-50 text-white">
       <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-7 lg:px-10">
-        <a href="/" className="text-[28px] font-semibold tracking-[-.06em]">Cirlo</a>
+        <a href="/" aria-label="Cirlo home"><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-10 w-auto"/></a>
         <nav className="hidden items-center gap-9 text-[12px] font-medium md:flex">
           <a href="#cirlos">Find a Cirlo</a><a href="#how">How it works</a><a href="#membership">Membership</a><a href="#become">Become a Cirlo</a>
         </nav>
@@ -91,6 +91,6 @@ export default function NewCirloLanding(){
       </section>
     </main>
 
-    <footer className="bg-[#F3F5EC] px-6 py-12 lg:px-10"><div className="mx-auto flex max-w-[1500px] flex-col gap-8 border-t border-[#CDD3C1] pt-10 md:flex-row md:items-end md:justify-between"><div><div className="text-3xl font-semibold tracking-[-.06em]">Cirlo</div><p className="mt-3 text-sm text-[#7C876F]">Different lives. Shared wisdom.</p></div><div className="flex flex-wrap gap-6 text-sm"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a><span>hello@cirloapp.com</span></div></div></footer>
+    <footer className="bg-[#F3F5EC] px-6 py-12 lg:px-10"><div className="mx-auto flex max-w-[1500px] flex-col gap-8 border-t border-[#CDD3C1] pt-10 md:flex-row md:items-end md:justify-between"><div><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-12 w-auto"/><p className="mt-3 text-sm text-[#7C876F]">Different lives. Shared wisdom.</p></div><div className="flex flex-wrap gap-6 text-sm"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a><span>hello@cirloapp.com</span></div></div></footer>
   </div>
 }
