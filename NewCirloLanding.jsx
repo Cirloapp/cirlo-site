@@ -6,7 +6,7 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 export default function NewCirloLanding(){
   const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
   const women=[
-    {name:'Denise',season:'Marriage',proof:'34 YEARS MARRIED · 3 KIDS RAISED',img:'https://images.pexels.com/photos/16121479/pexels-photo-16121479.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+    {name:'Denise',season:'Marriage',proof:'34 YEARS MARRIED · 3 KIDS RAISED',img:'https://images.pexels.com/photos/733500/pexels-photo-733500.jpeg?auto=compress&cs=tinysrgb&w=1800'},
     {name:'Renee',season:'Starting over',proof:'STARTED OVER AT 52 · NEW CITY · NEW CHAPTER',img:'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1800'},
     {name:'Monica',season:'Motherhood',proof:'3 KIDS · 2 CAREERS · ZERO THEORY',img:'https://images.pexels.com/photos/1749799/pexels-photo-1749799.jpeg?auto=compress&cs=tinysrgb&w=1800'}
   ];
