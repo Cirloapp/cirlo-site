@@ -40,7 +40,7 @@ export default function NewCirloLanding(){
             <p className="eyebrow text-[#C8F135]">Real women · Lived wisdom · Private voice notes</p>
             <h1 className="h1 serif mt-6">Every woman needs a woman who's been there.</h1>
             <div className="mt-10 flex flex-col gap-7 border-t border-white/40 pt-7 md:flex-row md:items-center md:justify-between">
-              <p className="max-w-xl text-lg leading-8 text-white/90">Bad influence. Excellent perspective.</p>
+              <p className="max-w-xl text-lg leading-8 text-white/90">Life has questions. Somebody's lived the answer.</p>
               <button onClick={download} className="w-fit bg-[#C8F135] px-8 py-4 text-sm font-semibold uppercase tracking-[.1em] text-[#242A20]">FIND HER ↗</button>
             </div>
           </div>
@@ -49,13 +49,13 @@ export default function NewCirloLanding(){
 
       <section className="bg-[#F3F5EC] px-6 py-24 lg:px-10">
         <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
-          <div><p className="eyebrow text-[#66705B]">The Cirlo difference</p><h2 className="h2 serif mt-5">Your group chat has done enough.</h2></div>
-          <div className="max-w-2xl lg:justify-self-end"><p className="text-2xl leading-10">Ask someone with no stake in the drama.</p><p className="mt-6 text-lg leading-8 text-[#7C876F]">Real women. Real experience. Zero need to explain yourself tomorrow.</p><a href="#how" className="mt-7 inline-block border-b border-[#66705B] pb-1 text-sm font-semibold uppercase tracking-[.1em]">How Cirlo works</a></div>
+          <div><p className="eyebrow text-[#66705B]">The Cirlo difference</p><h2 className="h2 serif mt-5">Why figure everything out from scratch?</h2></div>
+          <div className="max-w-2xl lg:justify-self-end"><p className="text-2xl leading-10">Ask someone who's already done the thing.</p><p className="mt-6 text-lg leading-8 text-[#7C876F]">Real women. Real experience. Useful for the big stuff, small stuff, and oddly specific stuff.</p><a href="#how" className="mt-7 inline-block border-b border-[#66705B] pb-1 text-sm font-semibold uppercase tracking-[.1em]">How Cirlo works</a></div>
         </div>
       </section>
 
       <section className="overflow-hidden bg-[#C8F135] py-4 text-[#242A20]">
-        <div className="whitespace-nowrap text-center text-sm font-bold uppercase tracking-[.18em]">NO GROUP CHAT REQUIRED &nbsp; • &nbsp; NO AUNTIES ALERTED &nbsp; • &nbsp; NO 47-PART REDDIT THREAD &nbsp; • &nbsp; JUST ASK HER</div>
+        <div className="whitespace-nowrap text-center text-sm font-bold uppercase tracking-[.18em]">FIRST BABY? ASK HER &nbsp; • &nbsp; NEW BOSS? ASK HER &nbsp; • &nbsp; MOVING CITIES? ASK HER &nbsp; • &nbsp; THINKING ABOUT BANGS? DEFINITELY ASK HER</div>
       </section>
 
       <section id="cirlos" className="bg-white px-6 py-24 lg:px-10">
@@ -71,7 +71,7 @@ export default function NewCirloLanding(){
         <div className="mx-auto max-w-[1500px]">
           <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
             <div><p className="eyebrow text-[#C8F135]">Today / 001</p><p className="mt-5 max-w-xs text-sm leading-6 text-white/55">One question a day. Because you have other things to do.</p></div>
-            <div><h2 className="h2 serif">When did you stop caring what people thought of you?</h2>
+            <div><h2 className="h2 serif">What's something you started later than everyone else?</h2>
               <div className="mt-12 border-t border-white/25">
                 {[['DENISE, 61','0:47'],['MONICA, 43','1:12'],['RENEE, 52','0:39']].map(([n,t],i)=><div key={n} className="grid grid-cols-[1fr_auto] items-center border-b border-white/25 py-5 md:grid-cols-[180px_1fr_auto]"><b className="text-sm tracking-[.08em]">{n}</b><div className="hidden items-center gap-1 md:flex">{[18,34,22,48,28,39,17,44,25,33,20,40].map((h,j)=><span key={j} className="w-[3px] bg-[#C8F135]" style={{height:(h*(.65+i*.08))+'px'}}/>)}</div><span className="text-sm text-white/55">{t} &nbsp; ▶</span></div>)}
               </div>
@@ -83,16 +83,16 @@ export default function NewCirloLanding(){
 
       <section id="how" className="grid bg-[#66705B] text-white lg:grid-cols-2">
         <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/9167154/pexels-photo-9167154.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
-        <div className="flex items-center px-7 py-20 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">How it works</p><h2 className="h2 serif mt-5">Say the part you left out of the group chat.</h2><p className="mt-7 text-lg leading-8 text-white/80">No screenshots. No side-eyes at brunch. Just ask.</p><div className="mt-10 border-t border-white/30">{['Just listen','Tell me what you think','Help me solve it','What should I say?'].map((x,i)=><div key={x} className="flex items-center justify-between border-b border-white/30 py-5 text-xl"><span>{x}</span><span className={i===2?'h-3 w-3 bg-[#C8F135]':'text-[#C8F135]'}>{i===2?'':'→'}</span></div>)}</div></div></div>
+        <div className="flex items-center px-7 py-20 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">How it works</p><h2 className="h2 serif mt-5">Ask the thing you can't exactly Google.</h2><p className="mt-7 text-lg leading-8 text-white/80">Career move. First baby. Solo trip. Bangs. Just ask.</p><div className="mt-10 border-t border-white/30">{['Just listen','Tell me what you think','Help me solve it','What should I say?'].map((x,i)=><div key={x} className="flex items-center justify-between border-b border-white/30 py-5 text-xl"><span>{x}</span><span className={i===2?'h-3 w-3 bg-[#C8F135]':'text-[#C8F135]'}>{i===2?'':'→'}</span></div>)}</div></div></div>
       </section>
 
       <section className="bg-[#F3F5EC] px-6 py-24 lg:px-10">
-        <div className="mx-auto max-w-[1500px] text-center"><p className="eyebrow text-[#66705B]">What you get</p><h2 className="h2 serif mx-auto mt-5 max-w-4xl">Ask a woman. Wild concept.</h2><div className="mx-auto mt-12 grid max-w-5xl border-y border-[#CDD3C1] md:grid-cols-3"><div className="p-8 md:border-r md:border-[#CDD3C1]"><div className="serif text-5xl">01</div><p className="mt-4">Choose a woman by the life she's lived.</p></div><div className="p-8 md:border-r md:border-[#CDD3C1]"><div className="serif text-5xl">02</div><p className="mt-4">Send a private voice note and choose what you need.</p></div><div className="p-8"><div className="serif text-5xl">03</div><p className="mt-4">Hear her perspective back in her own voice.</p></div></div></div>
+        <div className="mx-auto max-w-[1500px] text-center"><p className="eyebrow text-[#66705B]">What you get</p><h2 className="h2 serif mx-auto mt-5 max-w-4xl">Someone has already done this.</h2><div className="mx-auto mt-12 grid max-w-5xl border-y border-[#CDD3C1] md:grid-cols-3"><div className="p-8 md:border-r md:border-[#CDD3C1]"><div className="serif text-5xl">01</div><p className="mt-4">Choose a woman by the life she's lived.</p></div><div className="p-8 md:border-r md:border-[#CDD3C1]"><div className="serif text-5xl">02</div><p className="mt-4">Send a private voice note and choose what you need.</p></div><div className="p-8"><div className="serif text-5xl">03</div><p className="mt-4">Hear her perspective back in her own voice.</p></div></div></div>
       </section>
 
       <section className="relative overflow-hidden bg-[#7C876F] px-6 py-24 text-[#242A20] lg:px-10">
         <div className="absolute -right-24 -top-32 text-[32rem] font-semibold leading-none text-[#C8F135]/10">C</div>
-        <div className="relative mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[.45fr_1fr]"><p className="eyebrow pt-3">No theory</p><blockquote className="serif text-5xl leading-[1.02] md:text-7xl">You could ask the internet. Or you could ask Denise.</blockquote></div>
+        <div className="relative mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[.45fr_1fr]"><p className="eyebrow pt-3">No theory</p><blockquote className="serif text-5xl leading-[1.02] md:text-7xl">You could research it for three hours. Or ask someone who's done it.</blockquote></div>
       </section>
 
       <section id="membership" className="bg-white px-6 py-24 lg:px-10">
@@ -103,7 +103,7 @@ export default function NewCirloLanding(){
       </section>
 
       <section id="become" className="grid bg-[#242A20] text-white lg:grid-cols-2">
-        <div className="flex items-center px-7 py-24 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">Become a Cirlo</p><h2 className="h2 serif mt-5">Your questionable decisions finally have ROI.</h2><p className="mt-7 text-lg leading-8 text-white/75">Turns out, living through some things is a credential. Share what you know. Get paid for it.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block bg-[#C8F135] px-7 py-4 text-sm font-semibold uppercase tracking-[.1em] text-[#242A20]">Become a Cirlo</a></div></div>
+        <div className="flex items-center px-7 py-24 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">Become a Cirlo</p><h2 className="h2 serif mt-5">Turns out, living is a credential.</h2><p className="mt-7 text-lg leading-8 text-white/75">What you've learned from careers, relationships, motherhood, reinvention, travel, money, style, home, and everyday life can help another woman. Share what you know. Get paid for it.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block bg-[#C8F135] px-7 py-4 text-sm font-semibold uppercase tracking-[.1em] text-[#242A20]">Become a Cirlo</a></div></div>
         <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/7020845/pexels-photo-7020845.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
       </section>
     </main>
