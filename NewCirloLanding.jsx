@@ -6,9 +6,9 @@ const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 export default function NewCirloLanding(){
   const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
   const women=[
-    {name:'Denise',season:'Marriage',proof:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/20414870/pexels-photo-20414870/free-photo-of-elderly-woman-sitting-in-black-dress.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-    {name:'Renee',season:'Starting over',proof:'New city · New chapter at 52',img:'https://images.pexels.com/photos/36220496/pexels-photo-36220496/free-photo-of-black-and-white-fashion-editorial-with-a-modern-flair.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-    {name:'Monica',season:'Motherhood',proof:'Three kids · Life · Identity',img:'https://images.pexels.com/photos/21714470/pexels-photo-21714470/free-photo-of-black-and-white-photo-of-woman-on-street.jpeg?auto=compress&cs=tinysrgb&w=1800'}
+    {name:'Denise',season:'Marriage',proof:'Married 34 years · Raised 3',img:'https://images.pexels.com/photos/5257532/pexels-photo-5257532.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+    {name:'Renee',season:'Starting over',proof:'New city · New chapter at 52',img:'https://images.pexels.com/photos/9167115/pexels-photo-9167115.jpeg?auto=compress&cs=tinysrgb&w=1800'},
+    {name:'Monica',season:'Motherhood',proof:'Three kids · Life · Identity',img:'https://images.pexels.com/photos/10211580/pexels-photo-10211580.jpeg?auto=compress&cs=tinysrgb&w=1800'}
   ];
   return <div className="bg-[#F7F2E9] text-[#21171C]">
     <style>{`
@@ -32,7 +32,7 @@ export default function NewCirloLanding(){
 
     <main>
       <section className="hero relative flex items-end overflow-hidden bg-[#681D36] text-white">
-        <img src="https://images.pexels.com/photos/20414870/pexels-photo-20414870/free-photo-of-elderly-woman-sitting-in-black-dress.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="" className="absolute inset-0 h-full w-full object-cover object-center"/>
+        <img src="https://images.pexels.com/photos/5257536/pexels-photo-5257536.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="" className="absolute inset-0 h-full w-full object-cover object-center"/>
         <div className="absolute inset-0 bg-gradient-to-r from-[#21171C]/80 via-[#21171C]/40 to-[#21171C]/10"/>
         <div className="relative z-10 mx-auto w-full max-w-[1500px] px-6 pb-14 pt-36 lg:px-10 lg:pb-20">
           <div className="max-w-[1050px]">
@@ -49,7 +49,7 @@ export default function NewCirloLanding(){
       <section className="bg-[#F7F2E9] px-6 py-24 lg:px-10">
         <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
           <div><p className="eyebrow text-[#681D36]">The Cirlo difference</p><h2 className="h2 serif mt-5">Wisdom without the performance.</h2></div>
-          <div className="max-w-2xl lg:justify-self-end"><p className="text-2xl leading-10">Not a feed. Not a forum. Not advice from strangers shouting into the internet.</p><p className="mt-6 text-lg leading-8 text-[#6D5B5D]">Cirlo gives you private access to vetted women with real lived experience—so when life gets complicated, you can hear from someone who has already walked through it.</p><a href="#how" className="mt-7 inline-block border-b border-[#681D36] pb-1 text-sm font-semibold uppercase tracking-[.1em]">How Cirlo works</a></div>
+          <div className="max-w-2xl lg:justify-self-end"><p className="text-2xl leading-10">Not a feed. Not a forum. Not advice from strangers shouting into the internet—and not a conversation you have to have with a friend, sister, coworker, or anyone who already knows your life.</p><p className="mt-6 text-lg leading-8 text-[#6D5B5D]">Cirlo gives you private access to vetted women with real lived experience—for the hard seasons, the exciting ones, the awkward questions, big decisions, fresh starts, relationships, motherhood, ambition, joy, and everything in between.</p><a href="#how" className="mt-7 inline-block border-b border-[#681D36] pb-1 text-sm font-semibold uppercase tracking-[.1em]">How Cirlo works</a></div>
         </div>
       </section>
 
@@ -63,7 +63,7 @@ export default function NewCirloLanding(){
       </section>
 
       <section id="how" className="grid bg-[#681D36] text-white lg:grid-cols-2">
-        <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
+        <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/9167154/pexels-photo-9167154.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
         <div className="flex items-center px-7 py-20 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">How it works</p><h2 className="h2 serif mt-5">Ask in your own voice.</h2><p className="mt-7 text-lg leading-8 text-white/80">Say what's happening without turning it into a polished post. Before you send, tell her what you need from the conversation.</p><div className="mt-10 border-t border-white/30">{['Just listen','Tell me what you think','Help me solve it','What should I say?'].map((x,i)=><div key={x} className="flex items-center justify-between border-b border-white/30 py-5 text-xl"><span>{x}</span><span className={i===2?'h-3 w-3 bg-[#C8F135]':'text-[#C8F135]'}>{i===2?'':'→'}</span></div>)}</div></div></div>
       </section>
 
@@ -72,21 +72,21 @@ export default function NewCirloLanding(){
       </section>
 
       <section className="relative min-h-[72vh] overflow-hidden text-white">
-        <img src="https://images.pexels.com/photos/36220496/pexels-photo-36220496/free-photo-of-black-and-white-fashion-editorial-with-a-modern-flair.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="" className="absolute inset-0 h-full w-full object-cover"/>
+        <img src="https://images.pexels.com/photos/7610403/pexels-photo-7610403.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="" className="absolute inset-0 h-full w-full object-cover"/>
         <div className="absolute inset-0 bg-[#21171C]/55"/>
         <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-[1500px] items-end px-6 py-16 lg:px-10"><div className="max-w-3xl"><p className="eyebrow text-[#C8F135]">Perspective, not perfection</p><blockquote className="serif mt-6 text-4xl leading-tight md:text-6xl">“Sometimes you don't need another search result. You need a woman who can say, ‘I've been there.’”</blockquote></div></div>
       </section>
 
       <section id="membership" className="bg-white px-6 py-24 lg:px-10">
         <div className="mx-auto grid max-w-[1500px] gap-16 lg:grid-cols-[1fr_.85fr]">
-          <div><p className="eyebrow text-[#681D36]">Cirlo membership</p><h2 className="h2 serif mt-5">Wisdom, when life gets real.</h2><p className="mt-7 max-w-xl text-lg leading-8 text-[#6D5B5D]">Your membership gives you ongoing access to the Cirlo network—not just one conversation.</p></div>
+          <div><p className="eyebrow text-[#681D36]">Cirlo membership</p><h2 className="h2 serif mt-5">A woman to ask. Whatever the season.</h2><p className="mt-7 max-w-xl text-lg leading-8 text-[#6D5B5D]">Your membership gives you ongoing access to the Cirlo network—for perspective, celebration, curiosity, decisions, transitions, and the moments you simply want to talk through with someone who's been there.</p></div>
           <div className="border border-[#D8CCBE] p-8 lg:p-10"><div className="flex items-start justify-between gap-5"><div><div className="serif text-6xl">$24.99</div><p className="mt-1 text-sm text-[#6D5B5D]">per month · cancel anytime</p></div><span className="bg-[#C8F135] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.12em]">7 days free</span></div><div className="mt-8 border-t border-[#D8CCBE]">{[['Wisdom Notes each month','6'],['Talk to','Any Cirlo'],['Ask the Circle','Included'],['Replies','Within 48 hrs'],['Unused notes','Roll over 60 days']].map(([a,b])=><div key={a} className="flex justify-between border-b border-[#D8CCBE] py-4"><span>{a}</span><b>{b}</b></div>)}</div><button onClick={download} className="mt-8 w-full bg-[#681D36] px-7 py-4 text-sm font-semibold uppercase tracking-[.1em] text-white">Start my free week</button></div>
         </div>
       </section>
 
       <section id="become" className="grid bg-[#21171C] text-white lg:grid-cols-2">
         <div className="flex items-center px-7 py-24 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">Become a Cirlo</p><h2 className="h2 serif mt-5">You've lived a life worth sharing.</h2><p className="mt-7 text-lg leading-8 text-white/75">Your lived experience can be exactly what another woman needs to hear. Respond in your own voice. Earn for the wisdom you share.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block bg-[#C8F135] px-7 py-4 text-sm font-semibold uppercase tracking-[.1em] text-[#21171C]">Become a Cirlo</a></div></div>
-        <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
+        <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/7020845/pexels-photo-7020845.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
       </section>
     </main>
 
