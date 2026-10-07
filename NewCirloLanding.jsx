@@ -4,110 +4,76 @@ const APP_STORE='https://apps.apple.com/us/app/cirlo/id6751201819';
 const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
 
 export default function NewCirloLanding(){
-  const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
-  const women=[
-    {name:'Denise',season:'Marriage',proof:'34 YEARS MARRIED · 3 KIDS RAISED',img:'https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-    {name:'Renee',season:'Starting over',proof:'STARTED OVER AT 52 · NEW CITY · NEW CHAPTER',img:'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1800'},
-    {name:'Monica',season:'Motherhood',proof:'3 KIDS · 2 CAREERS · ZERO THEORY',img:'https://images.pexels.com/photos/1749799/pexels-photo-1749799.jpeg?auto=compress&cs=tinysrgb&w=1800'}
-  ];
-  return <div className="bg-[#F3F5EC] text-[#242A20]">
-    <style>{`
-      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap');
-      html{scroll-behavior:smooth}body{margin:0;background:#F3F5EC;font-family:'DM Sans',sans-serif}.serif{font-family:'Libre Caslon Display',Georgia,serif}
-      .hero{min-height:92vh}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
-      .h1{font-size:clamp(4rem,8.7vw,9.6rem);line-height:.82;letter-spacing:-.055em;}.h2{font-size:clamp(3rem,5.5vw,6.4rem);line-height:.9;letter-spacing:-.045em;}
-      .cardimg{transition:transform .8s ease}.card:hover .cardimg{transform:scale(1.025)}
-      @media(prefers-reduced-motion:reduce){.cardimg{transition:none}}
-    `}</style>
+ const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
+ const answers=[
+  {name:'Denise',age:'61',time:'0:47',img:'https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg?auto=compress&cs=tinysrgb&w=1200'},
+  {name:'Monica',age:'43',time:'1:12',img:'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200'},
+  {name:'Renee',age:'52',time:'0:39',img:'https://images.pexels.com/photos/5905445/pexels-photo-5905445.jpeg?auto=compress&cs=tinysrgb&w=1200'}
+ ];
+ return <div className="min-h-screen bg-[#F3F5EC] text-[#242A20]">
+  <style>{`
+   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap');
+   *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#F3F5EC;font-family:'DM Sans',sans-serif}.serif{font-family:'Libre Caslon Display',Georgia,serif}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}.rule{border-color:#CDD3C1}.wave span{display:block;width:2px;background:#242A20}.portrait{filter:grayscale(1) contrast(1.12)}
+  `}</style>
 
-    <header className="absolute inset-x-0 top-0 z-50 text-white">
-      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-7 lg:px-10">
-        <a href="/" aria-label="Cirlo home"><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-10 w-auto"/></a>
-        <nav className="hidden items-center gap-9 text-[12px] font-medium md:flex">
-          <a href="#cirlos">Find a Cirlo</a><a href="#how">How it works</a><a href="#membership">Membership</a><a href="#become">Become a Cirlo</a>
-        </nav>
-        <button onClick={download} className="border border-white/70 px-5 py-3 text-[12px] font-semibold uppercase tracking-[.12em]">Get started</button>
-      </div>
-    </header>
+  <header className="border-b rule">
+   <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 lg:px-10">
+    <a href="/" aria-label="Cirlo home"><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-10 w-auto"/></a>
+    <nav className="hidden items-center gap-9 text-xs md:flex"><a href="#how">How it works</a><a href="#cirlos">Meet the Cirlos</a><a href="#membership">Membership</a></nav>
+    <button onClick={download} className="rounded-full bg-[#C8F135] px-6 py-3 text-xs font-bold uppercase tracking-[.1em]">Join waitlist</button>
+   </div>
+  </header>
 
-    <main>
-      <section className="hero relative flex items-end overflow-hidden bg-[#66705B] text-white">
-        <div className="absolute -right-[10vw] -top-[12vw] h-[48vw] w-[48vw] rounded-full border border-[#C8F135]/35"/>
-        <div className="absolute right-[8vw] top-[18vh] h-3 w-3 bg-[#C8F135]"/>
-        <div className="absolute bottom-[12vh] right-[14vw] text-[22vw] font-semibold leading-none text-white/[.035]">C</div>
-        <div className="relative z-10 mx-auto w-full max-w-[1500px] px-6 pb-14 pt-36 lg:px-10 lg:pb-20">
-          <div className="max-w-[1050px]">
-            <p className="eyebrow text-[#C8F135]">Real women · Lived wisdom · Private voice notes</p>
-            <h1 className="h1 serif mt-6">Every woman needs a woman who's been there.</h1>
-            <div className="mt-10 flex flex-col gap-7 border-t border-white/40 pt-7 md:flex-row md:items-center md:justify-between">
-              <p className="max-w-xl text-lg leading-8 text-white/90">Life has questions. Somebody's lived the answer.</p>
-              <button onClick={download} className="w-fit bg-[#C8F135] px-8 py-4 text-sm font-semibold uppercase tracking-[.1em] text-[#242A20]">FIND HER ↗</button>
-            </div>
-          </div>
-        </div>
-      </section>
+  <main>
+   <section className="mx-auto grid max-w-[1440px] gap-10 px-6 py-14 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-10 lg:py-20">
+    <div className="max-w-[620px]">
+     <p className="eyebrow text-[#66705B]">Real women. Real experience.</p>
+     <h1 className="serif mt-5 text-[clamp(3.8rem,6.5vw,7.2rem)] leading-[.9] tracking-[-.045em]">Every woman needs a woman who's been there.</h1>
+     <p className="mt-7 text-sm font-semibold uppercase tracking-[.24em]">There's a woman for that.</p>
+     <button onClick={download} className="mt-8 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Find her &nbsp; →</button>
+    </div>
+    <div className="relative overflow-hidden bg-[#242A20] text-white">
+     <img src="https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Denise" className="portrait h-[560px] w-full object-cover object-center opacity-90"/>
+     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"/>
+     <div className="absolute bottom-0 left-0 right-0 p-7 md:p-9">
+      <div className="serif text-3xl">Denise, 61</div>
+      <div className="mt-2 text-xs uppercase leading-5 tracking-[.14em] text-white/75">34 years married · 3 kids raised · Built a business</div>
+      <div className="mt-6 flex items-center gap-4"><button className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C8F135] text-lg text-[#242A20]">▶</button><div className="wave flex h-9 items-center gap-[3px]">{[12,22,16,30,19,27,13,32,18,24,14,28,20].map((h,i)=><span key={i} style={{height:h}} className="!bg-white"/>)}</div><span className="text-xs">0:48</span></div>
+     </div>
+    </div>
+   </section>
 
-      <section className="bg-[#F3F5EC] px-6 py-24 lg:px-10">
-        <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
-          <div><p className="eyebrow text-[#66705B]">The Cirlo difference</p><h2 className="h2 serif mt-5">Why figure everything out from scratch?</h2></div>
-          <div className="max-w-2xl lg:justify-self-end"><p className="text-2xl leading-10">Ask someone who's already done the thing.</p><p className="mt-6 text-lg leading-8 text-[#7C876F]">Real women. Real experience. Useful for the big stuff, small stuff, and oddly specific stuff.</p><a href="#how" className="mt-7 inline-block border-b border-[#66705B] pb-1 text-sm font-semibold uppercase tracking-[.1em]">How Cirlo works</a></div>
-        </div>
-      </section>
+   <section className="border-y rule bg-[#F8F9F3]">
+    <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-16 lg:grid-cols-[.72fr_1.28fr] lg:px-10">
+     <div><p className="eyebrow text-[#66705B]">Today we asked</p><h2 className="serif mt-5 text-5xl leading-[.98] tracking-[-.035em] md:text-6xl">What's something women don't realize until they're older?</h2><button onClick={download} className="mt-8 rounded-full border border-[#242A20] px-7 py-3 text-xs font-bold uppercase tracking-[.12em]">Be nosy &nbsp; →</button></div>
+     <div className="grid gap-5 sm:grid-cols-3">{answers.map(a=><article key={a.name}><img src={a.img} alt={a.name} className="portrait aspect-[4/3] w-full object-cover"/><div className="serif mt-3 text-xl">{a.name}, {a.age}</div><div className="mt-2 flex items-center gap-3"><button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#C8F135] text-[11px]">▶</button><div className="wave flex h-6 items-center gap-[2px]">{[8,14,10,19,12,17,9,20,11,15].map((h,i)=><span key={i} style={{height:h}}/>)}</div><span className="ml-auto text-xs">{a.time}</span></div></article>)}</div>
+    </div>
+   </section>
 
-      <section className="overflow-hidden bg-[#C8F135] py-4 text-[#242A20]">
-        <div className="whitespace-nowrap text-center text-sm font-bold uppercase tracking-[.18em]">FIRST BABY? ASK HER &nbsp; • &nbsp; NEW BOSS? ASK HER &nbsp; • &nbsp; MOVING CITIES? ASK HER &nbsp; • &nbsp; THINKING ABOUT BANGS? DEFINITELY ASK HER</div>
-      </section>
+   <section id="how" className="mx-auto grid max-w-[1440px] gap-14 px-6 py-20 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:px-10">
+    <div className="relative mx-auto w-full max-w-[430px] rotate-[-4deg] overflow-hidden rounded-[48px] border-[10px] border-[#242A20] bg-[#242A20] shadow-2xl">
+     <div className="relative min-h-[650px] overflow-hidden bg-[#242A20] text-white">
+      <img src="https://images.pexels.com/photos/733500/pexels-photo-733500.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" className="portrait absolute inset-0 h-full w-full object-cover opacity-55"/>
+      <div className="absolute inset-0 bg-gradient-to-t from-[#242A20] via-transparent to-[#242A20]/40"/>
+      <div className="relative p-7"><div className="text-lg font-semibold tracking-[.3em] text-[#C8F135]">CIRLO</div><div className="serif mt-20 text-5xl leading-[.95]">Real questions.<br/>Real women.</div><div className="mt-10 space-y-2 text-xs uppercase tracking-[.16em]"><div>Marriage</div><div>Motherhood</div><div>Career moves</div><div>Money</div><div>Style</div><div>And more</div></div></div>
+     </div>
+    </div>
+    <div className="max-w-xl"><p className="eyebrow text-[#66705B]">The Cirlo app</p><h2 className="serif mt-5 text-6xl leading-[.95] tracking-[-.04em] md:text-7xl">There's a woman for that.</h2><div className="mt-8 border-l border-[#CDD3C1] pl-7 text-lg leading-9"><p>Listen to real experiences.</p><p>Find women who've lived it.</p><p>Ask your own questions.</p><p>Hear back in their voice.</p></div><button onClick={download} className="mt-9 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+   </section>
 
-      <section id="cirlos" className="bg-white px-6 py-24 lg:px-10">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-[#66705B]">There’s a woman for that.</p><h2 className="h2 serif mt-5">There’s a woman for that.</h2></div><button onClick={download} className="w-fit border-b border-[#242A20] pb-1 text-sm font-semibold uppercase tracking-[.1em]">ASK HER ↗</button></div>
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {women.map(w=><article key={w.name} className="card group cursor-pointer"><div className="aspect-[3/2] overflow-hidden bg-[#E6EADD]"><img src={w.img} alt={w.name} className="cardimg h-full w-full object-cover grayscale contrast-125"/></div><div className="flex items-start justify-between border-b border-[#CDD3C1] py-5"><div><div className="serif text-3xl">{w.name}</div><div className="mt-1 text-sm text-[#7C876F]">{w.proof}</div></div><div className="bg-[#C8F135] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.12em]">{w.season}</div></div></article>)}
-          </div>
-        </div>
-      </section>
+   <section id="membership" className="border-y rule bg-[#E6EADD]">
+    <div className="mx-auto grid max-w-[1440px] gap-12 px-6 py-16 lg:grid-cols-[.7fr_1.3fr] lg:px-10">
+     <div><p className="eyebrow text-[#66705B]">Membership</p><h2 className="serif mt-5 text-5xl leading-none">Real access.<br/>Real women.</h2><p className="mt-5">7 days free. $24.99/month.</p></div>
+     <div className="grid gap-3 self-center text-base">{['3 private Cirlo Connections per month','Unlimited Daily listening','Access to all available Cirlos','Saved responses','Unused Connections roll over for 60 days'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={download} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+    </div>
+   </section>
 
-      <section className="bg-[#242A20] px-6 py-24 text-white lg:px-10">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr]">
-            <div><p className="eyebrow text-[#C8F135]">Today / 001</p><p className="mt-5 max-w-xs text-sm leading-6 text-white/55">One question a day. Because you have other things to do.</p></div>
-            <div><h2 className="h2 serif">What's something you started later than everyone else?</h2>
-              <div className="mt-12 border-t border-white/25">
-                {[['DENISE, 61','0:47'],['MONICA, 43','1:12'],['RENEE, 52','0:39']].map(([n,t],i)=><div key={n} className="grid grid-cols-[1fr_auto] items-center border-b border-white/25 py-5 md:grid-cols-[180px_1fr_auto]"><b className="text-sm tracking-[.08em]">{n}</b><div className="hidden items-center gap-1 md:flex">{[18,34,22,48,28,39,17,44,25,33,20,40].map((h,j)=><span key={j} className="w-[3px] bg-[#C8F135]" style={{height:(h*(.65+i*.08))+'px'}}/>)}</div><span className="text-sm text-white/55">{t} &nbsp; ▶</span></div>)}
-              </div>
-              <button onClick={download} className="mt-8 bg-[#C8F135] px-7 py-4 text-xs font-bold uppercase tracking-[.14em] text-[#242A20]">BE NOSY ↗</button>
-            </div>
-          </div>
-        </div>
-      </section>
+   <section id="cirlos" className="grid bg-[#242A20] text-white lg:grid-cols-[.58fr_1fr]">
+    <img src="https://images.pexels.com/photos/16121479/pexels-photo-16121479.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" className="portrait h-full min-h-[400px] w-full object-cover opacity-85"/>
+    <div className="flex items-center px-7 py-16 lg:px-16"><div><h2 className="serif text-6xl leading-[.95] md:text-7xl">Been there?<br/>Be a Cirlo.</h2><p className="mt-6 text-lg leading-8 text-white/75">Share what you know.<br/>Get paid for it.</p><a href="mailto:hello@cirloapp.com?subject=Become%20a%20Cirlo" className="mt-8 inline-block rounded-full border border-white px-7 py-4 text-xs font-bold uppercase tracking-[.12em]">Learn more &nbsp; →</a></div></div>
+   </section>
+  </main>
 
-      <section id="how" className="grid bg-[#66705B] text-white lg:grid-cols-2">
-        <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/9167154/pexels-photo-9167154.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
-        <div className="flex items-center px-7 py-20 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">How it works</p><h2 className="h2 serif mt-5">Ask the thing you can't exactly Google.</h2><p className="mt-7 text-lg leading-8 text-white/80">Career move. First baby. Solo trip. Bangs. Just ask.</p><div className="mt-10 border-t border-white/30">{['Just listen','Tell me what you think','Help me solve it','What should I say?'].map((x,i)=><div key={x} className="flex items-center justify-between border-b border-white/30 py-5 text-xl"><span>{x}</span><span className={i===2?'h-3 w-3 bg-[#C8F135]':'text-[#C8F135]'}>{i===2?'':'→'}</span></div>)}</div></div></div>
-      </section>
-
-      <section className="bg-[#F3F5EC] px-6 py-24 lg:px-10">
-        <div className="mx-auto max-w-[1500px] text-center"><p className="eyebrow text-[#66705B]">What you get</p><h2 className="h2 serif mx-auto mt-5 max-w-4xl">Someone has already done this.</h2><div className="mx-auto mt-12 grid max-w-5xl border-y border-[#CDD3C1] md:grid-cols-3"><div className="p-8 md:border-r md:border-[#CDD3C1]"><div className="serif text-5xl">01</div><p className="mt-4">Choose a woman by the life she's lived.</p></div><div className="p-8 md:border-r md:border-[#CDD3C1]"><div className="serif text-5xl">02</div><p className="mt-4">Send a private voice note and choose what you need.</p></div><div className="p-8"><div className="serif text-5xl">03</div><p className="mt-4">Hear her perspective back in her own voice.</p></div></div></div>
-      </section>
-
-      <section className="relative overflow-hidden bg-[#7C876F] px-6 py-24 text-[#242A20] lg:px-10">
-        <div className="absolute -right-24 -top-32 text-[32rem] font-semibold leading-none text-[#C8F135]/10">C</div>
-        <div className="relative mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[.45fr_1fr]"><p className="eyebrow pt-3">No theory</p><blockquote className="serif text-5xl leading-[1.02] md:text-7xl">You could research it for three hours. Or ask someone who's done it.</blockquote></div>
-      </section>
-
-      <section id="membership" className="bg-white px-6 py-24 lg:px-10">
-        <div className="mx-auto grid max-w-[1500px] gap-16 lg:grid-cols-[1fr_.85fr]">
-          <div><p className="eyebrow text-[#66705B]">Cirlo membership</p><h2 className="h2 serif mt-5">Three women. Three conversations. </h2><p className="mt-7 max-w-xl text-lg leading-8 text-[#7C876F]">Three private Connections a month. Unlimited Daily listening. No meter running while you talk.</p></div>
-          <div className="border border-[#CDD3C1] p-8 lg:p-10"><div className="flex items-start justify-between gap-5"><div><div className="serif text-6xl">$24.99</div><p className="mt-1 text-sm text-[#7C876F]">per month · cancel anytime</p></div><span className="bg-[#C8F135] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.12em]">7 days free</span></div><div className="mt-8 border-t border-[#CDD3C1]">{[['Private Connections','3 / month'],['Each Connection','Private conversation'],['Daily listening','Unlimited'],['Talk to','Any available Cirlo'],['Unused Connections','Roll over 60 days']].map(([a,b])=><div key={a} className="flex justify-between border-b border-[#CDD3C1] py-4"><span>{a}</span><b>{b}</b></div>)}</div><button onClick={download} className="mt-8 w-full bg-[#66705B] px-7 py-4 text-sm font-semibold uppercase tracking-[.1em] text-white">Start my free week</button></div>
-        </div>
-      </section>
-
-      <section id="become" className="grid bg-[#242A20] text-white lg:grid-cols-2">
-        <div className="flex items-center px-7 py-24 lg:px-16"><div className="max-w-xl"><p className="eyebrow text-[#C8F135]">Become a Cirlo</p><h2 className="h2 serif mt-5">Been there? Be a Cirlo.</h2><p className="mt-7 text-lg leading-8 text-white/75">Share what you know. Get paid for it.</p><a href="mailto:hello@cirloapp.com?subject=I%20want%20to%20become%20a%20Cirlo" className="mt-8 inline-block bg-[#C8F135] px-7 py-4 text-sm font-semibold uppercase tracking-[.1em] text-[#242A20]">Become a Cirlo</a></div></div>
-        <div className="min-h-[70vh] bg-[url('https://images.pexels.com/photos/7020845/pexels-photo-7020845.jpeg?auto=compress&cs=tinysrgb&w=1800')] bg-cover bg-center"/>
-      </section>
-    </main>
-
-    <footer className="bg-[#F3F5EC] px-6 py-12 lg:px-10"><div className="mx-auto flex max-w-[1500px] flex-col gap-8 border-t border-[#CDD3C1] pt-10 md:flex-row md:items-end md:justify-between"><div><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-12 w-auto"/><p className="mt-3 text-sm text-[#7C876F]">There’s a woman for that.</p></div><div className="flex flex-wrap gap-6 text-sm"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a><span>hello@cirloapp.com</span></div></div></footer>
-  </div>
+  <footer className="px-6 py-9 lg:px-10"><div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-6"><div className="text-2xl font-semibold tracking-[.22em]">CIRLO</div><div className="flex gap-6 text-xs"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a></div><div className="text-xs uppercase tracking-[.18em]">There's a woman for that.</div></div></footer>
+ </div>
 }
