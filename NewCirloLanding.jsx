@@ -74,6 +74,6 @@ export default function NewCirloLanding(){
    </section>
   </main>
 
-  <footer className="px-6 py-9 lg:px-10"><div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-6"><div className="text-2xl font-semibold tracking-[.22em]">CIRLO</div><div className="flex gap-6 text-xs"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a></div><div className="text-xs uppercase tracking-[.18em]">There's a woman for that.</div></div></footer>
+  <footer className="px-6 py-9 lg:px-10"><div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-6"><div className="text-2xl font-semibold tracking-[.22em]">CIRLO</div><div className="flex gap-6 text-xs"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/accessibility">Accessibility</a><a href="/subscription-terms">Membership & Cancellation</a><a href="/delete-account">Delete Account</a><a href="/support">Support</a></div><div className="text-xs uppercase tracking-[.18em]">There's a woman for that.</div></div></footer>
  </div>
 }
