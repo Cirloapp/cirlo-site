@@ -63,8 +63,8 @@ export default function NewCirloLanding(){
 
    <section id="membership" className="border-y rule bg-[#E6EADD]">
     <div className="mx-auto grid max-w-[1440px] gap-12 px-6 py-16 lg:grid-cols-[.7fr_1.3fr] lg:px-10">
-     <div><p className="eyebrow text-[#66705B]">Membership</p><h2 className="serif mt-5 text-5xl leading-none">Real access.<br/>Real women.</h2><p className="mt-5">7 days free. $24.99/month.</p></div>
-     <div className="grid gap-3 self-center text-base">{['3 private Cirlo Connections per month','Unlimited Daily listening','Access to all available Cirlos','Saved responses','Unused Connections roll over for 60 days'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={download} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+     <div><p className="eyebrow text-[#66705B]">Membership</p><h2 className="serif mt-5 text-5xl leading-none">Real access.<br/>Real women.</h2><p className="mt-5">Free to join.</p></div>
+     <div className="grid gap-3 self-center text-base">{['A new Daily Question every day','Unlimited listening','Access to all available Cirlos','Save the answers that speak to you','Follow the Cirlos you want to keep hearing from'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={download} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
     </div>
    </section>
 

@@ -48,6 +48,9 @@ if (pathname === '/eula') {
   return <Eula />;
 }
 
+if (pathname === '/delete-account') {
+  return <LegalPage title="Delete Your Cirlo Account" html={"<p>You can delete your Cirlo account and its data at any time.</p>\n<h2>In the app</h2>\n<p>Open Cirlo, tap <strong>You</strong>, then <strong>Settings \u2192 Delete my account</strong>. For your security, you may be asked to sign in again first.</p>\n<h2>Without the app</h2>\n<p>Email <a href=\"mailto:hello@cirloapp.com?subject=Delete%20my%20Cirlo%20account\">hello@cirloapp.com</a> from the email address on your account with the subject \u201cDelete my Cirlo account.\u201d We will confirm and delete it within 7 days.</p>\n<h2>What is deleted</h2>\n<ul>\n<li>your account, name, and email address</li>\n<li>your saved answers and the Cirlos you follow</li>\n<li>for Cirlos: your profile, photo, intro recording, and voice answers</li>\n</ul>\n<h2>What may be kept</h2>\n<p>Copies in backups are removed within 30 days. Payment and tax records for Cirlos are kept as long as the law requires. Reports you submitted about content may be kept to keep Cirlo safe.</p>"} />;
+}
 if (pathname === '/accessibility') {
   return <AccessibilityStatement />;
 }
@@ -552,234 +555,50 @@ function DownloadPage({ googlePlayUrl, appStoreUrl }) {
     </div>
   );
 }
-function LegalPage({ title, children }) {
+const LEGAL_CSS = `
+.legal{font-family:'DM Sans',system-ui,sans-serif;color:#3A4135;font-size:16px;line-height:1.7}
+.legal .dates{color:#66705B;font-size:14px;margin:0 0 28px}
+.legal h2{font-family:'Libre Caslon Display',Georgia,serif;color:#242A20;font-size:26px;line-height:1.2;margin:40px 0 10px;font-weight:400}
+.legal h3{color:#242A20;font-size:17px;font-weight:600;margin:24px 0 6px}
+.legal p{margin:0 0 14px}.legal ul{padding-left:22px;margin:0 0 14px;list-style:disc}.legal li{margin:4px 0}
+.legal a{color:#242A20;text-decoration:underline}.legal strong{color:#242A20}
+`;
+
+function LegalPage({ title, html }) {
   return (
-    <div className="min-h-screen bg-[#f7f1ed] px-6 py-12">
-      <div className="mx-auto max-w-4xl rounded-3xl bg-white p-8 shadow-sm md:p-12">
-        <a href="/" className="text-[#a67c7c] underline">
-          ← Back to Cirlo
-        </a>
-
-        <h1 className="mt-8 text-4xl font-semibold text-[#2b1713]">
-          {title}
-        </h1>
-
-        <div className="mt-8 space-y-4 text-[#735e53] leading-8">
-          {children}
+    <div className="min-h-screen bg-[#F3F5EC] text-[#242A20]">
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap');body{margin:0;background:#F3F5EC}` + LEGAL_CSS}</style>
+      <header className="border-b border-[#CDD3C1]">
+        <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
+          <a href="/" aria-label="Cirlo home"><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-9 w-auto" /></a>
+          <a href="/" className="text-xs font-bold uppercase tracking-[.12em]">← Back to Cirlo</a>
         </div>
-      </div>
+      </header>
+      <main className="mx-auto max-w-3xl px-6 py-12 md:py-16">
+        <h1 style={{fontFamily:"'Libre Caslon Display',Georgia,serif",fontWeight:400}} className="text-5xl leading-[1.02] tracking-[-.03em] md:text-6xl">{title}</h1>
+        <div className="legal mt-5" dangerouslySetInnerHTML={{ __html: html }} />
+      </main>
+      <footer className="border-t border-[#CDD3C1] px-6 py-8">
+        <div className="mx-auto flex max-w-3xl flex-wrap gap-6 text-xs">
+          <a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/eula">EULA</a><a href="/accessibility">Accessibility</a><a href="/delete-account">Delete account</a><a href="mailto:hello@cirloapp.com">Contact</a>
+        </div>
+      </footer>
     </div>
   );
 }
-function PrivacyPolicy() {
-  return (
-    <LegalPage title="Privacy Policy">
-      Privacy Policy
-Effective Date: September 23, 2025
-Last Updated: May 31, 2026
-Introduction
-Welcome to Cirlo, a product of Origin & Co. ("Company," "we," "our," or "us").
-Cirlo is a voice-first memory preservation platform designed to help users capture, organize, and preserve personal voice recordings, stories, reflections, life lessons, and meaningful moments. While Cirlo is especially popular among first-time mothers and families, the platform may be used by anyone who wishes to preserve memories and experiences through voice.
-Your privacy is important to us. This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices available to you.
-Information We Collect
-We may collect:
-Account Information
-Name (if provided)
-Email address
-Login credentials and authentication information
-User Content
-Audio recordings
-Recording titles
-Tags, categories, and notes
-Content you voluntarily upload or create within Cirlo
-Technical Information
-Device type
-Operating system
-Browser information
-IP address
-App usage information
-Analytics and performance data
-How We Collect Information
-We collect information:
-Directly from you when you create an account or use Cirlo
-Automatically through analytics and performance monitoring tools
-Through third-party authentication and infrastructure providers
-How We Use Information
-We use information to:
-Provide and maintain Cirlo
-Store and organize your recordings
-Improve app functionality and user experience
-Respond to support requests
-Communicate service updates and product announcements
-Protect the security and integrity of the platform
-Storage of Recordings
-Audio recordings, titles, tags, and related content may be stored using secure cloud infrastructure providers, including Google Firebase, in order to provide the Cirlo service.
-We implement reasonable administrative, technical, and organizational safeguards designed to protect your information. However, no method of electronic storage, transmission, or security measure can be guaranteed to be completely secure. Accordingly, we cannot guarantee the absolute security of your information.
 
-Sharing Information
-We do not sell your personal information.
-We may share information:
-With service providers that help operate Cirlo
-To comply with legal obligations
-To protect the rights, safety, or security of users or the Company
-In connection with a business transfer, merger, or acquisition
-Data Retention
-We retain information only as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce agreements.
-Your Rights
-Depending on your location, you may have rights to:
-Access your information
-Correct inaccurate information
-Request deletion of your account and data
-Withdraw consent where applicable
-To exercise these rights, contact us at hello@cirloapp.com.
-Children's Privacy
-Cirlo is not intended for children under the age of 13.
-We do not knowingly collect personal information from children under 13. If we become aware that such information has been collected, we will take reasonable steps to delete it.
-Changes to This Policy
-We may update this Privacy Policy periodically. Updated versions will be posted with a revised "Last Updated" date.
-Contact Us
-Origin & Co.
-hello@cirloapp.com
-www.cirloapp.com
-    </LegalPage>
-  );
+function PrivacyPolicy() {
+  return <LegalPage title="Privacy Policy" html={"<p class=\"dates\">Effective Date: October 8, 2026 \u00b7 Last Updated: October 8, 2026</p><p>This Privacy Policy explains how Origin &amp; Co LLC (\"Company,\" \"we,\" \"our,\" or \"us\") collects, uses, shares, and protects your information when you use the Cirlo mobile app and website (together, \"Cirlo\").</p>\n<p>Cirlo is a voice app where experienced women (\"Cirlos\") answer a Daily Question in their own voice, based on what they have lived. Members listen, save the answers that speak to them, and follow the Cirlos they want to keep hearing from. Cirlo shares personal experience. It is not therapy, counseling, medical, legal, or financial advice, and it is not an emergency service. If you are in crisis or in danger, call or text 988 (Suicide &amp; Crisis Lifeline) or call 911.</p>\n<p>By using Cirlo, you agree to this Privacy Policy and our <a href=\"/terms-of-service\">Terms of Service</a>.</p>\n<h2>1. Who Can Use Cirlo</h2>\n<p>Cirlo is only for adults 18 and older. We do not knowingly collect information from anyone under 18. If we learn that a minor has created an account, we will delete it.</p>\n<h2>2. Information We Collect</h2>\n<h3>Information you give us</h3>\n<ul>\n<li><strong>Account information:</strong> your first name, email address, and password, or your Apple sign-in details.</li>\n<li><strong>Activity in the app:</strong> the answers you save, the answers you mark \"Relate,\" the Cirlos you follow, and whether you have requested early access to future features.</li>\n<li><strong>Messages to us:</strong> anything you send when you contact us.</li>\n</ul>\n<h3>Additional information from Cirlos</h3>\n<p>If you apply or serve as a Cirlo, we also collect:</p>\n<ul>\n<li>your first name, age, photo, tagline, the seasons of life you have lived through, and your intro recording</li>\n<li>the voice answers you record to Daily Questions</li>\n<li>application and review details, and records of published answers and payments</li>\n<li>the payment and tax information needed to pay you, such as your payment method details and a Form W-9</li>\n</ul>\n<h3>Information collected automatically</h3>\n<ul>\n<li>device type, operating system, app version, and general usage data</li>\n<li>crash, error, and performance data</li>\n<li>a push notification token, if you allow notifications</li>\n</ul>\n<h2>3. How We Use Your Information</h2>\n<p>We use your information to:</p>\n<ul>\n<li>create and manage your account</li>\n<li>show the Daily Question and the Cirlos' answers</li>\n<li>save the answers you keep and the Cirlos you follow</li>\n<li>review Cirlo applications and answers before they are published</li>\n<li>pay Cirlos for published answers and meet tax reporting requirements</li>\n<li>send notifications about new questions, answers, and account activity</li>\n<li>respond to your questions and support requests</li>\n<li>keep Cirlo safe, enforce our Terms, and prevent misuse</li>\n<li>fix problems and improve Cirlo</li>\n</ul>\n<p>We do not sell your personal information, and we do not use voice recordings for advertising.</p>\n<h2>4. Who Can See Your Information</h2>\n<ul>\n<li><strong>Members:</strong> your name, saved answers, \"Relate\" taps, and the Cirlos you follow are private to you. Cirlos and other members cannot see them.</li>\n<li><strong>Cirlos:</strong> once approved, a Cirlo's first name, age, photo, tagline, seasons of life, intro recording, and published answers can be seen and heard by everyone signed in to Cirlo. Answers are only shown after we review and approve them.</li>\n<li><strong>Our team:</strong> we access account information and recordings only when needed to review applications and answers, provide support, investigate misuse, or comply with the law.</li>\n</ul>\n<h2>5. Sharing With Service Providers</h2>\n<p>We share information only as needed to run Cirlo, with providers who are required to protect it:</p>\n<ul>\n<li><strong>Google Firebase:</strong> account sign-in, database, file storage, and notifications</li>\n<li><strong>Google Firebase Crashlytics and Performance Monitoring:</strong> crash and performance reports</li>\n<li><strong>PostHog:</strong> anonymous app usage analytics</li>\n<li><strong>Apple App Store and Google Play:</strong> app distribution</li>\n<li><strong>Payment providers:</strong> paying Cirlos</li>\n<li><strong>Email and support tools:</strong> responding to you</li>\n</ul>\n<p>We may also disclose information if required by law, to protect someone's safety, to investigate fraud or abuse, or as part of a merger, sale, or transfer of our business.</p>\n<h2>6. How Long We Keep Information</h2>\n<p>We keep your information while your account is active.</p>\n<p>When you delete your account in the app, your account, saved answers, and follows are deleted right away. If you are a Cirlo, your profile, answers, and recordings are deleted too. Copies in our backups are removed within 30 days. Some records may be kept longer when the law requires it, such as payment and tax records.</p>\n<h2>7. Deleting Your Account</h2>\n<p>You can delete your account anytime in the app under <strong>Settings \u2192 Delete my account</strong>. You can also request deletion at <a href=\"/delete-account\">cirloapp.com/delete-account</a> or by emailing hello@cirloapp.com.</p>\n<h2>8. Your Privacy Rights</h2>\n<p>Depending on where you live, you may have the right to:</p>\n<ul>\n<li>access the personal information we hold about you</li>\n<li>correct inaccurate information</li>\n<li>delete your information</li>\n<li>receive a copy of your information</li>\n<li>opt out of certain uses of your information</li>\n<li>not be treated differently for using these rights</li>\n</ul>\n<p>To make a request, email hello@cirloapp.com. We may need to verify your identity before completing it.</p>\n<h2>9. Security</h2>\n<p>We use reasonable safeguards to protect your information, including encrypted connections and access controls. No system is completely secure, so please use a strong password and keep your login private.</p>\n<h2>10. Changes to This Policy</h2>\n<p>We may update this Privacy Policy as Cirlo changes, including when we add new features. If we make material changes, we will update the date above and notify you in the app or by email.</p>\n<h2>11. Contact Us</h2>\n<p>Origin &amp; Co LLC<br>4239 Lindell Blvd<br>Saint Louis, MO 63108<br>Email: hello@cirloapp.com</p>"} />;
 }
 
 function TermsOfService() {
-  return (
-    <LegalPage title="Terms of Service">
-     Terms of Service
-Effective Date: September 23, 2025
-Last Updated: May 31, 2026
-Agreement to Terms
-Welcome to Cirlo, a product of Origin & Co.
-By accessing or using Cirlo, you agree to be bound by these Terms of Service. If you do not agree, you may not use the Services.
-Description of Service
-Cirlo is a voice-first memory preservation platform that enables users to capture, organize, store, and revisit personal stories, memories, reflections, life lessons, and meaningful moments.
-Eligibility
-You must be at least 13 years old to use Cirlo.
-By using Cirlo, you represent that you meet this requirement.
-User Accounts
-You are responsible for maintaining the confidentiality of your account credentials and for all activity occurring under your account.
-User Content
-You retain ownership of all content you create, upload, or store within Cirlo.
-You grant Origin & Co. a limited, non-exclusive license to store, process, display, transmit, and back up your content solely for the purpose of operating and improving the Services.
-Acceptable Use
-You agree not to:
-Violate any law or regulation
-Infringe another person's intellectual property rights
-Upload malicious software or harmful content
-Harass, threaten, or abuse others
-Attempt unauthorized access to systems or accounts
-Intellectual Property
-All Cirlo software, branding, logos, designs, features, and content provided by Origin & Co. remain our exclusive property unless otherwise stated.
-Subscriptions
-Certain features may require a paid subscription.
-Subscription pricing, billing, and renewal terms will be disclosed within the application.
-Termination
-We may suspend or terminate access to Cirlo if you violate these Terms or misuse the Services.
-Disclaimer
-Cirlo is provided on an "as is" and "as available" basis without warranties of any kind.
-We do not guarantee uninterrupted, secure, or error-free operation.
-Limitation of Liability
-To the fullest extent permitted by law, Origin & Co. shall not be liable for indirect, incidental, consequential, special, or punitive damages arising from your use of Cirlo.
-Governing Law
-These Terms are governed by the laws of the State of Missouri.
-Contact
-hello@cirloapp.com
-    </LegalPage>
-  );
+  return <LegalPage title="Terms of Service" html={"<p class=\"dates\">Effective Date: October 8, 2026 \u00b7 Last Updated: October 8, 2026</p><p>These Terms of Service (\"Terms\") are an agreement between you and Origin &amp; Co LLC (\"Company,\" \"we,\" \"our,\" or \"us\") for your use of the Cirlo mobile app and website (together, \"Cirlo\"). By creating an account or using Cirlo, you agree to these Terms and our <a href=\"/privacy-policy\">Privacy Policy</a>. If you do not agree, do not use Cirlo.</p>\n<h2>1. What Cirlo Is</h2>\n<p>Cirlo is a voice app where experienced women (\"Cirlos\") answer a Daily Question in their own voice, based on what they have lived. Members (\"Members\") listen to their answers, save the ones that speak to them, and follow the Cirlos they want to keep hearing from.</p>\n<h2>2. What Cirlo Is Not</h2>\n<p>Cirlo shares personal experience. <strong>Cirlo is not therapy, counseling, or medical, mental health, legal, or financial advice, and it is not an emergency or crisis service.</strong> Cirlos share their own stories and opinions. They are not acting as licensed professionals, even if they hold a license in their own careers. Do not rely on Cirlo for decisions that need professional advice.</p>\n<p><strong>If you are in crisis or in danger, call or text 988 (Suicide &amp; Crisis Lifeline) or call 911.</strong></p>\n<h2>3. Eligibility</h2>\n<p>You must be at least 18 years old to use Cirlo. By using Cirlo, you confirm that you are 18 or older and able to agree to these Terms.</p>\n<h2>4. Your Account</h2>\n<p>You are responsible for your account, keeping your login private, and all activity under your account. Give accurate information when you sign up and keep it current. You may not create an account for someone else or share your account.</p>\n<h2>5. Price</h2>\n<p>Cirlo is free to use. If we offer paid features in the future, we will show the price and terms in the app before you buy, and you will never be charged without agreeing first.</p>\n<h2>6. Listening to Answers</h2>\n<ul>\n<li>Answers are personal stories and opinions of the Cirlos who recorded them, not statements by Origin &amp; Co.</li>\n<li>You may listen to and save answers inside Cirlo for your personal use. Do not record, download, copy, share, or publish answers or Cirlo profiles outside Cirlo.</li>\n</ul>\n<h2>7. Community Guidelines</h2>\n<p>Cirlo works because it is kind, honest, and respectful. You agree not to:</p>\n<ul>\n<li>harass, threaten, shame, bully, or discriminate against anyone</li>\n<li>share sexual, hateful, violent, or illegal content</li>\n<li>share another person's private information</li>\n<li>pretend to be someone else or misrepresent your experience</li>\n<li>promote products, services, or solicitations</li>\n<li>share content that encourages self-harm or harm to others</li>\n<li>try to access other accounts, interfere with Cirlo, or copy or reverse-engineer the app</li>\n<li>use Cirlo for any unlawful purpose</li>\n</ul>\n<p>If you see something that breaks these guidelines, email hello@cirloapp.com. We may remove content, limit features, or suspend or terminate accounts that break these Terms. We may also contact emergency services if we believe someone is in danger.</p>\n<h2>8. Cirlo Terms</h2>\n<p>These terms also apply if you apply to be or serve as a Cirlo.</p>\n<ul>\n<li><strong>Applying:</strong> Cirlos sign up in the app, complete a profile, and record an intro. We review every application, and approval is at our discretion. Your profile is not shown to Members until you are approved.</li>\n<li><strong>Your answers:</strong> you record answers to Daily Questions in your own voice, based on your own experience. Every answer is reviewed before it is published, and we may decline or remove any answer.</li>\n<li><strong>Your content:</strong> you own your recordings. By submitting an answer, intro, or profile, you give us a worldwide, non-exclusive, royalty-free license to host, store, publish, play, and display it in Cirlo. This license lasts while your content is on Cirlo and ends when it is removed.</li>\n<li><strong>Honesty and privacy:</strong> share only your own experiences. Do not name, identify, or share private details about other people without their permission, and do not give professional advice.</li>\n<li><strong>Payment:</strong> we pay you for each answer we approve and publish, at the rate we confirm with you in writing. Answers that are declined or not published are not paid. Payments are made monthly for the answers published the previous month, using the payment method you provide.</li>\n<li><strong>Independent contractor:</strong> Cirlos are independent contractors, not employees, agents, or partners of Origin &amp; Co. You are responsible for your own taxes. We may require a Form W-9 before paying you, and we will issue tax forms as required by law.</li>\n<li><strong>Ending:</strong> you may stop being a Cirlo anytime by telling us or deleting your account. We may end your participation at any time. Payment for answers already published before the end date will still be made.</li>\n</ul>\n<h2>9. Our Rights</h2>\n<p>Cirlo, including its software, design, name, and logos, belongs to Origin &amp; Co. You may not use our branding without permission. We may change, suspend, or discontinue any part of Cirlo at any time.</p>\n<h2>10. Ending Your Use</h2>\n<p>You may stop using Cirlo and delete your account anytime under Settings \u2192 Delete my account. We may suspend or end your access if you break these Terms, create risk for others, or if we stop offering Cirlo.</p>\n<h2>11. Disclaimers</h2>\n<p>Cirlo is provided \"as is\" and \"as available.\" To the fullest extent allowed by law, we make no warranties of any kind, including that Cirlo will be uninterrupted, error-free, or secure. Perspectives shared by Cirlos are their own personal experiences and opinions, not ours, and we are not responsible for decisions you make based on them.</p>\n<h2>12. Limitation of Liability</h2>\n<p>To the fullest extent allowed by law, Origin &amp; Co will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, profits, or goodwill, arising from your use of Cirlo. Our total liability for any claim related to Cirlo is limited to the greater of the amount you paid us in the 12 months before the claim or $100.</p>\n<h2>13. Indemnity</h2>\n<p>You agree to cover any claims, losses, or costs brought against Origin &amp; Co that arise from your content, your use of Cirlo, or your violation of these Terms.</p>\n<h2>14. Governing Law</h2>\n<p>These Terms are governed by the laws of the State of Missouri, without regard to conflict-of-law rules. Any dispute will be handled in the state or federal courts located in St. Louis County, Missouri.</p>\n<h2>15. App Store Terms</h2>\n<p>If you downloaded Cirlo from the Apple App Store, our <a href=\"/eula\">End User License Agreement</a> also applies. Apple and Google are not responsible for Cirlo or its content.</p>\n<h2>16. Changes to These Terms</h2>\n<p>We may update these Terms as Cirlo changes, including when we add new features. If we make material changes, we will update the date above and notify you in the app or by email. Continuing to use Cirlo after changes take effect means you accept the updated Terms.</p>\n<h2>17. Contact Us</h2>\n<p>Origin &amp; Co LLC<br>4239 Lindell Blvd<br>Saint Louis, MO 63108<br>Email: hello@cirloapp.com</p>"} />;
 }
 
 function Eula() {
-  return (
-    <LegalPage title="End User License Agreement (EULA)">
-      End User License Agreement (EULA)
-Effective Date: September 23, 2025
-Last Updated: May 31, 2026
-License Grant
-Origin & Co. grants you a limited, non-exclusive, non-transferable, revocable license to use Cirlo for personal, non-commercial purposes.
-Ownership
-Cirlo and all associated intellectual property remain the property of Origin & Co.
-This Agreement does not transfer ownership rights to you.
-User Content
-You retain ownership of your recordings, stories, notes, and other content.
-By using Cirlo, you grant Origin & Co. a limited license to store, process, transmit, back up, and display your content solely as necessary to provide and improve the Services.
-Restrictions
-You may not:
-Copy or redistribute Cirlo
-Reverse engineer or decompile the software
-Attempt unauthorized access to systems
-Use Cirlo for unlawful purposes
-No Professional Advice
-Cirlo is designed to help users preserve memories, stories, reflections, family moments, and life experiences.
-Cirlo does not provide legal, medical, psychological, financial, or other professional advice.
-Privacy
-Your use of Cirlo is subject to our Privacy Policy.
-Termination
-We may suspend or terminate your access if you violate this Agreement.
-Disclaimer of Warranties
-Cirlo is provided "as is" without warranties of any kind.
-Limitation of Liability
-To the fullest extent permitted by law, Origin & Co. shall not be liable for indirect, incidental, consequential, or special damages resulting from use of the application.
-Governing Law
-This Agreement is governed by the laws of the State of Missouri.
-Contact
-hello@cirloapp.com
-    </LegalPage>
-  );
+  return <LegalPage title="End User License Agreement (EULA)" html={"<p class=\"dates\">Effective Date: October 8, 2026 \u00b7 Last Updated: October 8, 2026</p><p>This End User License Agreement (\"Agreement\") is between you and Origin &amp; Co LLC (\"Company,\" \"we,\" or \"us\") and covers your use of the Cirlo mobile app (\"App\"). It works together with our <a href=\"/terms-of-service\">Terms of Service</a> and <a href=\"/privacy-policy\">Privacy Policy</a>.</p>\n<h2>1. License</h2>\n<p>We grant you a limited, personal, non-exclusive, non-transferable, revocable license to download and use the App on devices you own or control, for your personal, non-commercial use, as allowed by these terms and the rules of the app store you downloaded it from.</p>\n<h2>2. Restrictions</h2>\n<p>You may not copy, modify, distribute, sell, rent, or sublicense the App; reverse-engineer or try to extract its source code; remove any notices; or use the App to break the law or our Terms of Service.</p>\n<h2>3. Ownership</h2>\n<p>The App and all rights in it belong to Origin &amp; Co. This Agreement gives you a license to use the App, not ownership of it. You keep ownership of the recordings and content you create, as described in our Terms of Service.</p>\n<h2>4. Price</h2>\n<p>The App is free. If paid features are offered in the future, they will be sold as in-app purchases through the Apple App Store or Google Play and governed by their payment terms and our Terms of Service.</p>\n<h2>5. Not Professional or Emergency Services</h2>\n<p>The App shares personal experience. It is not therapy, counseling, medical, legal, or financial advice, and it is not an emergency service. If you are in crisis, call or text 988 or call 911.</p>\n<h2>6. Termination</h2>\n<p>This license ends automatically if you break this Agreement or our Terms of Service, or when you delete your account and the App. When it ends, you must stop using the App.</p>\n<h2>7. No Warranty</h2>\n<p>The App is provided \"as is\" and \"as available,\" without warranties of any kind, to the fullest extent allowed by law.</p>\n<h2>8. Limitation of Liability</h2>\n<p>To the fullest extent allowed by law, Origin &amp; Co is not liable for indirect, incidental, special, or consequential damages arising from your use of the App.</p>\n<h2>9. Apple App Store Terms</h2>\n<p>If you downloaded the App from the Apple App Store:</p>\n<ul>\n<li>This Agreement is between you and Origin &amp; Co only, not Apple. Origin &amp; Co, not Apple, is responsible for the App and its content.</li>\n<li>Apple has no obligation to provide maintenance or support for the App.</li>\n<li>If the App fails to meet any applicable warranty, you may notify Apple, and Apple may refund the purchase price, if any. Apple has no other warranty obligation for the App.</li>\n<li>Apple is not responsible for any claims relating to the App, including product liability claims, claims that the App fails to meet legal or regulatory requirements, or consumer protection claims.</li>\n<li>Apple is not responsible for investigating or handling any claim that the App infringes someone else's intellectual property.</li>\n<li>You confirm that you are not located in a country subject to a U.S. government embargo or listed on any U.S. government list of prohibited or restricted parties.</li>\n<li>Apple and its subsidiaries are third-party beneficiaries of this Agreement and may enforce it against you.</li>\n</ul>\n<h2>10. Governing Law</h2>\n<p>This Agreement is governed by the laws of the State of Missouri.</p>\n<h2>11. Contact Us</h2>\n<p>Origin &amp; Co LLC<br>4239 Lindell Blvd<br>Saint Louis, MO 63108<br>Email: hello@cirloapp.com</p>"} />;
 }
 
 function AccessibilityStatement() {
-  return (
-    <LegalPage title="Accessibility Statement">
-      Accessibility Statement
-
-Effective Date: September 23, 2025
-Last Updated: May 31, 2026
-
-Origin & Co. is committed to making the Cirlo app and our website (www.cirloapp.com) accessible to all users.
-
-What Accessibility Means
-
-An accessible site allows visitors with disabilities to browse with the same or similar ease and enjoyment as other visitors, using built-in system capabilities and assistive technologies.
-
-Accessibility Efforts
-
-We have adapted this site in accordance with WCAG 2.1 Level AA guidelines. Examples of adjustments include:
-
-• Used the Accessibility Wizard to find and fix potential accessibility issues
-• Set the language of the site
-• Set the content order of the site’s pages
-• Defined clear heading structures on all of the site’s pages
-• Added alternative text to images
-• Implemented color combinations that meet the required color contrast
-• Reduced the use of motion on the site
-• Ensured all videos, audio, and files on the site are accessible
-
-Partial Compliance
-
-Some pages may include third-party content (e.g., embedded tools, external platforms). While we strive for accessibility, we cannot guarantee the compliance of such content. We welcome feedback if you encounter barriers.
-
-Our Commitment
-
-We are dedicated to continuous improvement and follow best practices outlined in the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA wherever reasonably possible. Our goal is that all individuals can:
-
-• Navigate with assistive technologies
-• Access and understand our content
-• Use our tools with minimal barriers
-
-Ongoing Improvements
-
-Accessibility remains an ongoing priority as we continue to improve and expand the Cirlo website and mobile application. We are committed to identifying and addressing accessibility barriers and improving the experience for all users.
-
-Requests, Issues and Suggestions
-
-If you experience difficulty accessing any part of our site or app, please let us know:
-
-hello@cirloapp.com
-
-We will work promptly to address your concern and ensure you have access to the information or service you need.
-    </LegalPage>
-  );
+  return <LegalPage title="Accessibility Statement" html={"<p class=\"dates\">Effective Date: October 8, 2026 \u00b7 Last Updated: October 8, 2026</p><p>Origin &amp; Co LLC is committed to making the Cirlo app and website (www.cirloapp.com) accessible to everyone.</p>\n<h2>Our Approach</h2>\n<p>We aim to follow the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. This includes:</p>\n<ul>\n<li>clear headings and a logical reading order</li>\n<li>alternative text for images</li>\n<li>color combinations that meet contrast requirements</li>\n<li>support for screen readers and system text sizes</li>\n<li>limited use of motion</li>\n</ul>\n<h2>Third-Party Content</h2>\n<p>Some features, such as app store pages and forms, are provided by third parties. We cannot guarantee their accessibility, but we welcome your feedback.</p>\n<h2>Contact Us</h2>\n<p>If you have trouble using any part of Cirlo, email hello@cirloapp.com and we will work to help promptly.</p>"} />;
 }
