@@ -53,7 +53,7 @@ export default function NewCirloLanding(){
    <section id="how" className="mx-auto grid max-w-[1440px] gap-14 px-6 py-20 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:px-10">
     <div className="relative mx-auto w-full max-w-[430px] rotate-[-4deg] overflow-hidden rounded-[48px] border-[10px] border-[#242A20] bg-[#242A20] shadow-2xl">
      <div className="relative min-h-[650px] overflow-hidden bg-[#242A20] text-white">
-      <img src="https://images.pexels.com/photos/6888692/pexels-photo-6888692.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Older Asian woman reflecting on life experience" className="portrait absolute inset-0 h-full w-full object-cover opacity-55"/>
+      <img src="https://images.pexels.com/photos/18671528/pexels-photo-18671528.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Older Asian woman reflecting on life experience" className="portrait absolute inset-0 h-full w-full object-cover opacity-55"/>
       <div className="absolute inset-0 bg-gradient-to-t from-[#242A20] via-transparent to-[#242A20]/40"/>
       <div className="relative p-7"><div className="text-lg font-semibold tracking-[.3em] text-[#C8F135]">CIRLO</div><div className="serif mt-20 text-5xl leading-[.95]">Real experience.<br/>Passed down.</div><div className="mt-10 space-y-2 text-xs uppercase tracking-[.16em]"><div>Marriage</div><div>Motherhood</div><div>Career &amp; Money</div></div></div>
      </div>
