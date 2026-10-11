@@ -1,6 +1,6 @@
 import React from 'react';
 
-const INSTAGRAM='https://www.instagram.com/cirlo.app/';
+const INSTAGRAM='https://www.instagram.com/cirloapp/';
 
 export default function NewCirloLanding(){
  const follow=()=>{window.open(INSTAGRAM,'_blank','noopener,noreferrer')};
