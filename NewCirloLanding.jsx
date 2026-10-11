@@ -19,7 +19,7 @@ export default function NewCirloLanding(){
   <header className="border-b rule">
    <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 lg:px-10">
     <a href="/" aria-label="Cirlo home"><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-10 w-auto"/></a>
-    <nav className="hidden items-center gap-9 text-xs md:flex"><a href="#how">How it works</a><a href="#cirlos">Meet the Cirlos</a><a href="#membership">Membership</a></nav>
+    <nav className="hidden items-center gap-9 text-xs md:flex"><a href="#how">How it works</a><a href="#cirlos">Meet the Cirlos</a><a href="#membership">Cirlo Connections</a></nav>
     <button onClick={download} className="rounded-full bg-[#C8F135] px-6 py-3 text-xs font-bold uppercase tracking-[.1em]">Join waitlist</button>
    </div>
   </header>
@@ -45,7 +45,7 @@ export default function NewCirloLanding(){
 
    <section className="border-y rule bg-[#F8F9F3]">
     <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-16 lg:grid-cols-[.72fr_1.28fr] lg:px-10">
-     <div><p className="eyebrow text-[#66705B]">Today we asked</p><h2 className="serif mt-5 text-5xl leading-[.98] tracking-[-.035em] md:text-6xl">What's something women don't realize until they're older?</h2><button onClick={download} className="mt-8 rounded-full border border-[#242A20] px-7 py-3 text-xs font-bold uppercase tracking-[.12em]">Be nosy &nbsp; →</button></div>
+     <div><p className="eyebrow text-[#66705B]">The Daily Question · Marriage, Motherhood, Career &amp; Money</p><h2 className="serif mt-5 text-5xl leading-[.98] tracking-[-.035em] md:text-6xl">What's something women don't realize until they're older?</h2><button onClick={download} className="mt-8 rounded-full border border-[#242A20] px-7 py-3 text-xs font-bold uppercase tracking-[.12em]">Be nosy &nbsp; →</button></div>
      <div className="grid gap-5 sm:grid-cols-3">{answers.map(a=><article key={a.name}><img src={a.img} alt={a.name} className="portrait aspect-[4/3] w-full object-cover"/><div className="serif mt-3 text-xl">{a.name}, {a.age}</div><div className="mt-2 flex items-center gap-3"><button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#C8F135] text-[11px]">▶</button><div className="wave flex h-6 items-center gap-[2px]">{[8,14,10,19,12,17,9,20,11,15].map((h,i)=><span key={i} style={{height:h}}/>)}</div><span className="ml-auto text-xs">{a.time}</span></div></article>)}</div>
     </div>
    </section>
@@ -53,24 +53,24 @@ export default function NewCirloLanding(){
    <section id="how" className="mx-auto grid max-w-[1440px] gap-14 px-6 py-20 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:px-10">
     <div className="relative mx-auto w-full max-w-[430px] rotate-[-4deg] overflow-hidden rounded-[48px] border-[10px] border-[#242A20] bg-[#242A20] shadow-2xl">
      <div className="relative min-h-[650px] overflow-hidden bg-[#242A20] text-white">
-      <img src="https://images.pexels.com/photos/733500/pexels-photo-733500.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" className="portrait absolute inset-0 h-full w-full object-cover opacity-55"/>
+      <img src="https://images.pexels.com/photos/5311789/pexels-photo-5311789.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" className="portrait absolute inset-0 h-full w-full object-cover opacity-55"/>
       <div className="absolute inset-0 bg-gradient-to-t from-[#242A20] via-transparent to-[#242A20]/40"/>
-      <div className="relative p-7"><div className="text-lg font-semibold tracking-[.3em] text-[#C8F135]">CIRLO</div><div className="serif mt-20 text-5xl leading-[.95]">Real questions.<br/>Real women.</div><div className="mt-10 space-y-2 text-xs uppercase tracking-[.16em]"><div>Marriage</div><div>Motherhood</div><div>Career moves</div><div>Money</div><div>Style</div><div>And more</div></div></div>
+      <div className="relative p-7"><div className="text-lg font-semibold tracking-[.3em] text-[#C8F135]">CIRLO</div><div className="serif mt-20 text-5xl leading-[.95]">Real questions.<br/>Real women.</div><div className="mt-10 space-y-2 text-xs uppercase tracking-[.16em]"><div>Marriage</div><div>Motherhood</div><div>Career &amp; Money</div></div></div>
      </div>
     </div>
-    <div className="max-w-xl"><p className="eyebrow text-[#66705B]">The Cirlo app</p><h2 className="serif mt-5 text-6xl leading-[.95] tracking-[-.04em] md:text-7xl">There's a woman for that.</h2><div className="mt-8 border-l border-[#CDD3C1] pl-7 text-lg leading-9"><p>Listen to real experiences.</p><p>Find women who've lived it.</p><p>Ask your own questions.</p><p>Hear back in their voice.</p></div><button onClick={download} className="mt-9 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+    <div className="max-w-xl"><p className="eyebrow text-[#66705B]">The Cirlo app</p><h2 className="serif mt-5 text-6xl leading-[.95] tracking-[-.04em] md:text-7xl">There's a woman for that.</h2><div className="mt-8 border-l border-[#CDD3C1] pl-7 text-lg leading-9"><p>Explore Marriage, Motherhood, and Career &amp; Money.</p><p>Hear real women share what they learned.</p><p>Discover Cirlos who understand your season.</p><p>Cirlo Connections bring you closer to women who've been there.</p></div><button onClick={download} className="mt-9 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
    </section>
 
    <section id="membership" className="border-y rule bg-[#E6EADD]">
     <div className="mx-auto grid max-w-[1440px] gap-12 px-6 py-16 lg:grid-cols-[.7fr_1.3fr] lg:px-10">
-     <div><p className="eyebrow text-[#66705B]">Membership</p><h2 className="serif mt-5 text-5xl leading-none">Real access.<br/>Real women.</h2><p className="mt-5">Free to join.</p></div>
-     <div className="grid gap-3 self-center text-base">{['A new Daily Question every day','Unlimited listening','Access to all available Cirlos','Save the answers that speak to you','Follow the Cirlos you want to keep hearing from'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={download} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+     <div><p className="eyebrow text-[#66705B]">Cirlo Connections</p><h2 className="serif mt-5 text-5xl leading-none">More than answers.<br/>Real connections.</h2><p className="mt-5">Daily Wisdom is where it starts. Cirlo Connections will bring you closer to women who have lived it.</p></div>
+     <div className="grid gap-3 self-center text-base">{['Marriage · Motherhood · Career & Money','Hear real experiences from women who have been there','Explore Founding Cirlo profiles','Cirlo Connections: deeper conversations coming in a future phase'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={download} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
     </div>
    </section>
 
    <section id="cirlos" className="grid bg-[#242A20] text-white lg:grid-cols-[.58fr_1fr]">
     <img src="https://images.pexels.com/photos/16121479/pexels-photo-16121479.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" className="portrait h-full min-h-[400px] w-full object-cover opacity-85"/>
-    <div className="flex items-center px-7 py-16 lg:px-16"><div><h2 className="serif text-6xl leading-[.95] md:text-7xl">Been there?<br/>Be a Cirlo.</h2><p className="mt-6 text-lg leading-8 text-white/75">Share what you know.<br/>Get paid for it.</p><a href="mailto:hello@cirloapp.com?subject=Become%20a%20Cirlo" className="mt-8 inline-block rounded-full border border-white px-7 py-4 text-xs font-bold uppercase tracking-[.12em]">Learn more &nbsp; →</a></div></div>
+    <div className="flex items-center px-7 py-16 lg:px-16"><div><h2 className="serif text-6xl leading-[.95] md:text-7xl">Been there?<br/>Be a Cirlo.</h2><p className="mt-6 text-lg leading-8 text-white/75">Share what you have lived.<br/>Help another woman find her way.</p><a href="mailto:hello@cirloapp.com?subject=Become%20a%20Cirlo" className="mt-8 inline-block rounded-full border border-white px-7 py-4 text-xs font-bold uppercase tracking-[.12em]">Learn more &nbsp; →</a></div></div>
    </section>
   </main>
 
