@@ -45,7 +45,7 @@ export default function NewCirloLanding(){
 
    <section className="border-y rule bg-[#F8F9F3]">
     <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-16 lg:grid-cols-[.72fr_1.28fr] lg:px-10">
-     <div><p className="eyebrow text-[#66705B]">Recorded wisdom · Marriage, Motherhood, Career &amp; Money</p><h2 className="serif mt-5 text-5xl leading-[.98] tracking-[-.035em] md:text-6xl">What did life teach you that you wish someone had told you sooner?</h2><button onClick={download} className="mt-8 rounded-full border border-[#242A20] px-7 py-3 text-xs font-bold uppercase tracking-[.12em]">Listen & learn &nbsp; →</button></div>
+     <div><p className="eyebrow text-[#66705B]">Recorded wisdom · Marriage, Motherhood, Career &amp; Money</p><h2 className="serif mt-5 text-5xl leading-[.98] tracking-[-.035em] md:text-6xl">What truth took you half your life to accept?</h2><button onClick={download} className="mt-8 rounded-full border border-[#242A20] px-7 py-3 text-xs font-bold uppercase tracking-[.12em]">Listen & learn &nbsp; →</button></div>
      <div className="grid gap-5 sm:grid-cols-3">{answers.map(a=><article key={a.name}><img src={a.img} alt={a.name} className="portrait aspect-[4/3] w-full object-cover"/><div className="serif mt-3 text-xl">{a.name}, {a.age}</div><div className="mt-2 flex items-center gap-3"><button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#C8F135] text-[11px]">▶</button><div className="wave flex h-6 items-center gap-[2px]">{[8,14,10,19,12,17,9,20,11,15].map((h,i)=><span key={i} style={{height:h}}/>)}</div><span className="ml-auto text-xs">{a.time}</span></div></article>)}</div>
     </div>
    </section>
