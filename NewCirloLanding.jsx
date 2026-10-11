@@ -29,7 +29,7 @@ export default function NewCirloLanding(){
     <div className="max-w-[620px]">
      <p className="eyebrow text-[#66705B]">Real women. Real experience.</p>
      <h1 className="serif mt-5 text-[clamp(3.8rem,6.5vw,7.2rem)] leading-[.9] tracking-[-.045em]">There's a woman for that.</h1>
-     <p className="mt-7 text-base leading-7">Wisdom from women who've lived it, passed down to the next generation. Listen to recorded answers about marriage, motherhood, career and money. Connect privately when you want to go deeper.</p>
+     <p className="mt-7 text-base leading-7">Older women share what life has taught them through recorded answers. Younger women listen, learn, and can connect privately with voices that resonate.</p>
      <button onClick={download} className="mt-8 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Discover their wisdom &nbsp; →</button>
     </div>
     <div className="relative overflow-hidden bg-[#242A20] text-white">
@@ -58,19 +58,19 @@ export default function NewCirloLanding(){
       <div className="relative p-7"><div className="text-lg font-semibold tracking-[.3em] text-[#C8F135]">CIRLO</div><div className="serif mt-20 text-5xl leading-[.95]">Real experience.<br/>Passed down.</div><div className="mt-10 space-y-2 text-xs uppercase tracking-[.16em]"><div>Marriage</div><div>Motherhood</div><div>Career &amp; Money</div></div></div>
      </div>
     </div>
-    <div className="max-w-xl"><p className="eyebrow text-[#66705B]">The Cirlo app</p><h2 className="serif mt-5 text-6xl leading-[.95] tracking-[-.04em] md:text-7xl">There's a woman for that.</h2><div className="mt-8 border-l border-[#CDD3C1] pl-7 text-lg leading-9"><p>Explore recorded answers about Marriage, Motherhood, and Career &amp; Money.</p><p>Hear older women share lessons from the lives they've lived.</p><p>Discover perspectives that speak to the chapter you're navigating.</p><p>Private Cirlo Connections are an optional way to have a deeper conversation, coming in a future phase.</p></div><button onClick={download} className="mt-9 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+    <div className="max-w-xl"><p className="eyebrow text-[#66705B]">How Cirlo works · Life teaches. Wisdom travels.</p><h2 className="serif mt-5 text-6xl leading-[.95] tracking-[-.04em] md:text-7xl">There's a woman for that.</h2><div className="mt-8 border-l border-[#CDD3C1] pl-7 text-lg leading-9"><p><strong>Women share.</strong> Older women record lessons about Marriage, Motherhood, and Career &amp; Money.</p><p><strong>The next generation listens.</strong> Younger women hear perspectives from those who've been there.</p><p><strong>Connections grow.</strong> When a voice resonates, listeners can request a private Cirlo Connection in a future phase.</p></div><button onClick={download} className="mt-9 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
    </section>
 
    <section id="membership" className="border-y rule bg-[#E6EADD]">
     <div className="mx-auto grid max-w-[1440px] gap-12 px-6 py-16 lg:grid-cols-[.7fr_1.3fr] lg:px-10">
-     <div><p className="eyebrow text-[#66705B]">Cirlo Connections</p><h2 className="serif mt-5 text-5xl leading-none">First, the wisdom.<br/>Then, connection.</h2><p className="mt-5">Start by listening to the recorded wisdom of women from older generations. If a woman's experience resonates, Cirlo Connections will offer an optional way to talk privately in a future phase.</p></div>
+     <div><p className="eyebrow text-[#66705B]">Cirlo Connections</p><h2 className="serif mt-5 text-5xl leading-none">First, the wisdom.<br/>Then, connection.</h2><p className="mt-5">Someone has lived through what you're figuring out. Listen to different perspectives, take what resonates, and leave what doesn't. Private Connections are planned for a future phase.</p></div>
      <div className="grid gap-3 self-center text-base">{['Marriage · Motherhood · Career & Money','Listen to recorded answers from women of older generations','Explore Founding Cirlo profiles','Cirlo Connections: deeper conversations coming in a future phase'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={download} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
     </div>
    </section>
 
    <section id="cirlos" className="grid bg-[#242A20] text-white lg:grid-cols-[.58fr_1fr]">
     <img src="https://images.pexels.com/photos/16121479/pexels-photo-16121479.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" className="portrait h-full min-h-[400px] w-full object-cover opacity-85"/>
-    <div className="flex items-center px-7 py-16 lg:px-16"><div><h2 className="serif text-6xl leading-[.95] md:text-7xl">Lived it?<br/>Pass it down.</h2><p className="mt-6 text-lg leading-8 text-white/75">Your experiences, hard-won lessons, and hindsight could guide the next generation. Become a founding Cirlo and share your wisdom through recorded answers.</p><a href="mailto:hello@cirloapp.com?subject=Become%20a%20Cirlo" className="mt-8 inline-block rounded-full border border-white px-7 py-4 text-xs font-bold uppercase tracking-[.12em]">Learn more &nbsp; →</a></div></div>
+    <div className="flex items-center px-7 py-16 lg:px-16"><div><h2 className="serif text-6xl leading-[.95] md:text-7xl">Lived it?<br/>Pass it down.</h2><p className="mt-6 text-lg leading-8 text-white/75">Your experience could be someone else's guidance. Share the lessons you learned and what you wish you'd known sooner through recorded answers.</p><a href="mailto:hello@cirloapp.com?subject=Become%20a%20Cirlo" className="mt-8 inline-block rounded-full border border-white px-7 py-4 text-xs font-bold uppercase tracking-[.12em]">Learn more &nbsp; →</a></div></div>
    </section>
   </main>
 
