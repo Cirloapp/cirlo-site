@@ -1,10 +1,10 @@
 import React from 'react';
 
-const APP_STORE='https://apps.apple.com/us/app/cirlo/id6751201819';
-const PLAY='https://play.google.com/store/apps/details?id=com.mycompany.cirlo';
+const INSTAGRAM='https://www.instagram.com/cirlo.app/';
 
 export default function NewCirloLanding(){
- const download=()=>{const u=navigator.userAgent||'';location.href=/android/i.test(u)?PLAY:/iPhone|iPad|iPod/i.test(u)?APP_STORE:'/download'};
+ const follow=()=>{window.open(INSTAGRAM,'_blank','noopener,noreferrer')};
+ // Illustrative editorial placeholders, not playable recordings.
  const answers=[
   {name:'Denise',age:'61',time:'0:47',img:'https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg?auto=compress&cs=tinysrgb&w=1200'},
   {name:'Monica',age:'43',time:'1:12',img:'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200'},
@@ -20,7 +20,7 @@ export default function NewCirloLanding(){
    <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-5 lg:px-10">
     <a href="/" aria-label="Cirlo home"><img src="/cirlo-logo-lime.svg" alt="Cirlo" className="h-10 w-auto"/></a>
     <nav className="hidden items-center gap-9 text-xs md:flex"><a href="#how">How it works</a><a href="#cirlos">Meet the Cirlos</a><a href="#membership">Cirlo Connections</a></nav>
-    <button onClick={download} className="rounded-full bg-[#C8F135] px-6 py-3 text-xs font-bold uppercase tracking-[.1em]">Join waitlist</button>
+    <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#C8F135] px-6 py-3 text-xs font-bold uppercase tracking-[.1em]">Follow on Instagram</a>
    </div>
   </header>
 
@@ -29,24 +29,24 @@ export default function NewCirloLanding(){
     <div className="max-w-[620px]">
      <p className="eyebrow text-[#66705B]">Real women. Real experience.</p>
      <h1 className="serif mt-5 text-[clamp(3.8rem,6.5vw,7.2rem)] leading-[.9] tracking-[-.045em]">There's a woman for that.</h1>
-     <p className="mt-7 text-base leading-7">Older women share what life has taught them through recorded answers. Younger women listen, learn, and can connect privately with voices that resonate.</p>
-     <button onClick={download} className="mt-8 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Discover their wisdom &nbsp; →</button>
+     <p className="mt-7 text-base leading-7">Wisdom from older generations, passed down. Real women sharing what life has taught them about marriage, motherhood, career, and money. Follow the stories as Cirlo grows.</p>
+     <button onClick={follow} className="mt-8 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Follow the wisdom &nbsp; →</button>
     </div>
     <div className="relative overflow-hidden bg-[#242A20] text-white">
      <img src="https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Denise" className="portrait h-[560px] w-full object-cover object-center opacity-90"/>
      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"/>
      <div className="absolute bottom-0 left-0 right-0 p-7 md:p-9">
-      <div className="serif text-3xl">Denise, 61</div>
-      <div className="mt-2 text-xs uppercase leading-5 tracking-[.14em] text-white/75">34 years married · 3 kids raised · Built a business</div>
-      <div className="mt-6 flex items-center gap-4"><button className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C8F135] text-lg text-[#242A20]">▶</button><div className="wave flex h-9 items-center gap-[3px]">{[12,22,16,30,19,27,13,32,18,24,14,28,20].map((h,i)=><span key={i} style={{height:h}} className="!bg-white"/>)}</div><span className="text-xs">0:48</span></div>
+      <div className="serif text-3xl">An example of wisdom shared</div>
+      <div className="mt-2 text-xs uppercase leading-5 tracking-[.14em] text-white/75">Illustrative preview · Follow on Instagram for real stories</div>
+      <div className="mt-6 flex items-center gap-4"><span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C8F135] text-lg text-[#242A20]">▶</span><div className="wave flex h-9 items-center gap-[3px]">{[12,22,16,30,19,27,13,32,18,24,14,28,20].map((h,i)=><span key={i} style={{height:h}} className="!bg-white"/>)}</div><span className="text-xs">0:48</span></div>
      </div>
     </div>
    </section>
 
    <section className="border-y rule bg-[#F8F9F3]">
     <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-16 lg:grid-cols-[.72fr_1.28fr] lg:px-10">
-     <div><p className="eyebrow text-[#66705B]">Recorded wisdom · Marriage, Motherhood, Career &amp; Money</p><h2 className="serif mt-5 text-5xl leading-[.98] tracking-[-.035em] md:text-6xl">What truth took you half your life to accept?</h2><button onClick={download} className="mt-8 rounded-full border border-[#242A20] px-7 py-3 text-xs font-bold uppercase tracking-[.12em]">Listen & learn &nbsp; →</button></div>
-     <div className="grid gap-5 sm:grid-cols-3">{answers.map(a=><article key={a.name}><img src={a.img} alt={a.name} className="portrait aspect-[4/3] w-full object-cover"/><div className="serif mt-3 text-xl">{a.name}, {a.age}</div><div className="mt-2 flex items-center gap-3"><button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#C8F135] text-[11px]">▶</button><div className="wave flex h-6 items-center gap-[2px]">{[8,14,10,19,12,17,9,20,11,15].map((h,i)=><span key={i} style={{height:h}}/>)}</div><span className="ml-auto text-xs">{a.time}</span></div></article>)}</div>
+     <div><p className="eyebrow text-[#66705B]">Recorded wisdom · Marriage, Motherhood, Career &amp; Money</p><h2 className="serif mt-5 text-5xl leading-[.98] tracking-[-.035em] md:text-6xl">What truth took you half your life to accept?</h2><button onClick={follow} className="mt-8 rounded-full border border-[#242A20] px-7 py-3 text-xs font-bold uppercase tracking-[.12em]">Follow the series &nbsp; →</button></div>
+     <div><p className="mb-3 text-xs uppercase tracking-[.12em] text-[#66705B]">Illustrative profiles · Real interviews coming on Instagram</p><div className="grid gap-5 sm:grid-cols-3">{answers.map(a=><article key={a.name}><img src={a.img} alt={a.name} className="portrait aspect-[4/3] w-full object-cover"/><div className="serif mt-3 text-xl">{a.name}, {a.age}</div><div className="mt-2 flex items-center gap-3"><span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-full bg-[#C8F135] text-[11px]">▶</span><div className="wave flex h-6 items-center gap-[2px]">{[8,14,10,19,12,17,9,20,11,15].map((h,i)=><span key={i} style={{height:h}}/>)}</div><span className="ml-auto text-xs">{a.time}</span></div></article>)}</div></div>
     </div>
    </section>
 
@@ -58,19 +58,19 @@ export default function NewCirloLanding(){
       <div className="relative p-7"><div className="text-lg font-semibold tracking-[.3em] text-[#C8F135]">CIRLO</div><div className="serif mt-20 text-5xl leading-[.95]">Real experience.<br/>Passed down.</div><div className="mt-10 space-y-2 text-xs uppercase tracking-[.16em]"><div>Marriage</div><div>Motherhood</div><div>Career &amp; Money</div></div></div>
      </div>
     </div>
-    <div className="max-w-xl"><p className="eyebrow text-[#66705B]">How Cirlo works · Life teaches. Wisdom travels.</p><h2 className="serif mt-5 text-6xl leading-[.95] tracking-[-.04em] md:text-7xl">There's a woman for that.</h2><div className="mt-8 border-l border-[#CDD3C1] pl-7 text-lg leading-9"><p><strong>Women share.</strong> Older women record lessons about Marriage, Motherhood, and Career &amp; Money.</p><p><strong>The next generation listens.</strong> Younger women hear perspectives from those who've been there.</p><p><strong>Connections grow.</strong> When a voice resonates, listeners can request a private Cirlo Connection in a future phase.</p></div><button onClick={download} className="mt-9 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+    <div className="max-w-xl"><p className="eyebrow text-[#66705B]">How Cirlo works · Life teaches. Wisdom travels.</p><h2 className="serif mt-5 text-6xl leading-[.95] tracking-[-.04em] md:text-7xl">There's a woman for that.</h2><div className="mt-8 border-l border-[#CDD3C1] pl-7 text-lg leading-9"><p><strong>Women share.</strong> Older women tell their stories and lessons about Marriage, Motherhood, and Career &amp; Money.</p><p><strong>The next generation listens.</strong> Follow Cirlo on Instagram for perspectives from women who've been there.</p><p><strong>Connections grow.</strong> Private Cirlo Connections are planned for a future phase; account registration is not open.</p></div><button onClick={follow} className="mt-9 rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Follow on Instagram &nbsp; →</button></div>
    </section>
 
    <section id="membership" className="border-y rule bg-[#E6EADD]">
     <div className="mx-auto grid max-w-[1440px] gap-12 px-6 py-16 lg:grid-cols-[.7fr_1.3fr] lg:px-10">
-     <div><p className="eyebrow text-[#66705B]">Cirlo Connections</p><h2 className="serif mt-5 text-5xl leading-none">First, the wisdom.<br/>Then, connection.</h2><p className="mt-5">Someone has lived through what you're figuring out. Listen to different perspectives, take what resonates, and leave what doesn't. Private Connections are planned for a future phase.</p></div>
-     <div className="grid gap-3 self-center text-base">{['Marriage · Motherhood · Career & Money','Listen to recorded answers from women of older generations','Explore Founding Cirlo profiles','Cirlo Connections: deeper conversations coming in a future phase'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={download} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Join waitlist &nbsp; →</button></div>
+     <div><p className="eyebrow text-[#66705B]">Cirlo Connections</p><h2 className="serif mt-5 text-5xl leading-none">First, the wisdom.<br/>Then, connection.</h2><p className="mt-5">Someone has lived through what you're figuring out. Follow their wisdom on Instagram. Private Cirlo Connections may come later; signups are not open.</p></div>
+     <div className="grid gap-3 self-center text-base">{['Marriage · Motherhood · Career & Money','Listen to recorded answers from women of older generations','Follow the Cirlo wisdom series on Instagram','Cirlo Connections: deeper conversations coming in a future phase'].map(x=><div key={x} className="flex items-center gap-4 border-b rule py-3"><span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#66705B] text-xs">✓</span>{x}</div>)}<button onClick={follow} className="mt-5 w-fit rounded-full bg-[#C8F135] px-8 py-4 text-sm font-bold uppercase tracking-[.12em]">Follow on Instagram &nbsp; →</button></div>
     </div>
    </section>
 
    <section id="cirlos" className="grid bg-[#242A20] text-white lg:grid-cols-[.58fr_1fr]">
     <img src="https://images.pexels.com/photos/16121479/pexels-photo-16121479.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" className="portrait h-full min-h-[400px] w-full object-cover opacity-85"/>
-    <div className="flex items-center px-7 py-16 lg:px-16"><div><h2 className="serif text-6xl leading-[.95] md:text-7xl">Lived it?<br/>Pass it down.</h2><p className="mt-6 text-lg leading-8 text-white/75">Your experience could be someone else's guidance. Share the lessons you learned and what you wish you'd known sooner through recorded answers.</p><a href="mailto:hello@cirloapp.com?subject=Become%20a%20Cirlo" className="mt-8 inline-block rounded-full border border-white px-7 py-4 text-xs font-bold uppercase tracking-[.12em]">Learn more &nbsp; →</a></div></div>
+    <div className="flex items-center px-7 py-16 lg:px-16"><div><h2 className="serif text-6xl leading-[.95] md:text-7xl">Lived it?<br/>Pass it down.</h2><p className="mt-6 text-lg leading-8 text-white/75">Your experience could be someone else's guidance. Share the lessons you learned and what you wish you'd known sooner through recorded answers.</p><a href="mailto:hello@cirloapp.com?subject=Share%20My%20Wisdom%20with%20Cirlo" className="mt-8 inline-block rounded-full border border-white px-7 py-4 text-xs font-bold uppercase tracking-[.12em]">Share your wisdom &nbsp; →</a></div></div>
    </section>
   </main>
 
